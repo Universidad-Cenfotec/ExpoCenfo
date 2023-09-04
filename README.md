@@ -9,6 +9,9 @@ El reglamento completo del desarrollo y presentación de proyectos lo puede enco
 
 
 ## ExpoCenfo Kit
+
+![Kit](https://github.com/Universidad-Cenfotec/ExpoCenfo/blob/main/imagenes/kitExpoCenfo.jpeg)
+
 A cada equipo participante se le entregarán dos kits que contienen:
 
 1. Microcontrolador [IdeaBoard](https://www.crcibernetica.com/crcibernetica-ideaboard/) (ESP32)
