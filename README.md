@@ -1,3 +1,5 @@
+![Kit](https://github.com/Universidad-Cenfotec/ExpoCenfo/blob/main/imagenes/kitExpoCenfo.jpeg)
+
 # ExpoCenfo
 
 Documentación del Kit para el evento ExpoCenfo de Universidad Cenfotec. ExpoCenfo es una feria para estudaintes de CENFOTEC donde ellos y ellas ueden desarrollar proyectos para el desarrollo de sistemas ciberfísicos.
@@ -9,8 +11,6 @@ El reglamento completo del desarrollo y presentación de proyectos lo puede enco
 
 
 ## ExpoCenfo Kit
-
-![Kit](https://github.com/Universidad-Cenfotec/ExpoCenfo/blob/main/imagenes/kitExpoCenfo.jpeg)
 
 A cada equipo participante se le entregarán dos kits que contienen:
 
