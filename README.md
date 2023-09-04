@@ -26,3 +26,7 @@ El kit es básico y los componetes quye trae son principalmente para hacer prueb
 - [Sobre CircuitPython](https://github.com/CRCibernetica/circuitpython-ideaboard/wiki/5.-CircuitPython-Getting-Started)
 - [Sobre conecciones IoT](https://github.com/CRCibernetica/circuitpython-ideaboard/wiki/6.-Adafruit-IO)
 
+## Videos instruccionales
+
+En desarrollo...
+
