@@ -21,7 +21,7 @@ El kit es básico y los componetes quye trae son principalmente para hacer prueb
 ## Sobre el controlador IdeaBaord
 
 - Ya la placa trae instalado el firmware y librerías (ideaboard y adafruit) para utilizar Citcuit Python para programación de el microcontrolador. La placa se puede programar con el Software Thonny, el cual puede descargar en este [link](https://thonny.org/).
-- Las instrucciones para conectarlo al IdeaBoard las puede encontrar en este [link](https://github.com/CRCibernetica/circuitpython-ideaboard/wiki/3.-Installation)
+- Las instrucciones para conectar Thonny al IdeaBoard las puede encontrar en este [link](https://github.com/CRCibernetica/circuitpython-ideaboard/wiki/3.-Installation)
 - [Información sobre los pines de la placa](https://github.com/CRCibernetica/circuitpython-ideaboard/wiki/2.-Pinouts-and-Jumper-Settings)
 - [Sobre CircuitPython](https://github.com/CRCibernetica/circuitpython-ideaboard/wiki/5.-CircuitPython-Getting-Started)
 - [Sobre conecciones IoT](https://github.com/CRCibernetica/circuitpython-ideaboard/wiki/6.-Adafruit-IO)
