@@ -31,5 +31,6 @@ El kit es básico y los componetes quye trae son principalmente para hacer prueb
 
 ## Videos instruccionales
 
-En desarrollo...
+- [Conectadno el potenciómetro y swith al ideaboard](https://youtu.be/JRFskjrEbQQ?si=1PL93Laggj9rKFyo)
+- [Conecvtando un sensor analógico de luz](https://youtu.be/01KUMd6t4qI?si=eI0LzwM_C0WRAzuN)
 
