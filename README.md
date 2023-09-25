@@ -27,7 +27,7 @@ El kit es básico y los componetes quye trae son principalmente para hacer prueb
 - Las instrucciones para conectar Thonny al IdeaBoard las puede encontrar en este [link](https://github.com/CRCibernetica/circuitpython-ideaboard/wiki/3.-Installation)
 - [Información sobre los pines de la placa](https://github.com/CRCibernetica/circuitpython-ideaboard/wiki/2.-Pinouts-and-Jumper-Settings)
 - [Sobre CircuitPython](https://github.com/CRCibernetica/circuitpython-ideaboard/wiki/5.-CircuitPython-Getting-Started)
-- [ágina de CircuitPython](https://circuitpython.org/)
+- [Página de CircuitPython](https://circuitpython.org/)
 - [Sobre conecciones IoT](https://github.com/CRCibernetica/circuitpython-ideaboard/wiki/6.-Adafruit-IO)
 
 ## Videos instruccionales
