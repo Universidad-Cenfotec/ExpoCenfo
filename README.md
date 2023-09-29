@@ -37,6 +37,7 @@ El kit es básico y los componetes quye trae son principalmente para hacer prueb
 Estos videos son parte de un microcurso que se impartió en CENFOTEC para aprender a utilizar el IdeaBoard.  Los videos fueron editados para dejar solmaente lo que correpondía a instrucción del profesor.
 
 - [Video Tutorial Parte I: Configuración y pasos iniciales](https://youtu.be/GzA7peI1woc?si=OdO6YoWW8xw9HHhe)
+- [VIdeo Tutorial Parte II: Varios de Iot y Librerías](https://youtu.be/Ed3BFiMo_tY?si=5UAHB34kgD7ZT3RM)
 
 ### Videos Instructivos Cortos
 
