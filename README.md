@@ -43,4 +43,5 @@ Estos videos son parte de un microcurso que se impartió en CENFOTEC para aprend
 
 - [Conectando el potenciómetro y switch al ideaboard](https://youtu.be/JRFskjrEbQQ?si=1PL93Laggj9rKFyo)
 - [Conectando un sensor analógico de luz](https://youtu.be/01KUMd6t4qI?si=eI0LzwM_C0WRAzuN)
+- [IoT con CircuitPython](https://youtu.be/1aXwTrAR5QA?si=KLa7RlJ8SpvxPVul)
 
