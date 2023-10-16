@@ -45,3 +45,6 @@ Estos videos son parte de un microcurso que se impartió en CENFOTEC para aprend
 - [Conectando el potenciómetro y switch al ideaboard](https://youtu.be/JRFskjrEbQQ?si=1PL93Laggj9rKFyo)
 - [Conectando un sensor analógico de luz](https://youtu.be/01KUMd6t4qI?si=eI0LzwM_C0WRAzuN)
 
+### Librerías de Interés
+
+- [Librería para utilizar el DHT11 y DHT21 en CyrcuitPython](https://github.com/adafruit/Adafruit_CircuitPython_DHT)
