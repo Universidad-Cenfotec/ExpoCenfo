@@ -39,7 +39,7 @@ Estos videos son parte de un microcurso que se impartió en CENFOTEC para aprend
 - [Video Tutorial Parte I: Configuración y pasos iniciales](https://youtu.be/GzA7peI1woc?si=OdO6YoWW8xw9HHhe)
 - [Video Tutorial Parte II: Varios de Iot y Librerías](https://youtu.be/Ed3BFiMo_tY?si=5UAHB34kgD7ZT3RM)
 - [Video Tutorial Parte III: IoT con CircuitPython](https://youtu.be/1aXwTrAR5QA?si=KLa7RlJ8SpvxPVul)
-- [Video Tutorial Parte IV: IoT con CircuitPython](https://youtu.be/4VtHSmRi3bw?si=9nALwzm9K9zSWp4J)
+- [Video Tutorial Parte IV: IoT con NodeJS](https://youtu.be/4VtHSmRi3bw?si=9nALwzm9K9zSWp4J)
 
 ### Videos Instructivos Cortos
 
