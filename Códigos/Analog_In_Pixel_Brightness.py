@@ -1,3 +1,6 @@
+# Ejemplo sencillo toma una entrada analógica 
+# y cambia el brillo del NeoPixel
+
 import board
 import time
 from ideaboard import IdeaBoard
