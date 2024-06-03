@@ -1,5 +1,6 @@
 # Tomás de Camino Beck
 # Universidad CENFOTEC
+#Modificado de https://wokwi.com/projects/380230722673959937 
 
 #Ejemplo de uso de pantalla LCD
 
@@ -10,28 +11,28 @@ from lcd import LCD
 from i2c_pcf8574_interface import I2CPCF8574Interface
 from lcd import CursorMode
 
-# Modify this if you have a different sized Character LCD
+# columnas y ffilas de la pantalla
 lcd_columns = 16
 lcd_rows = 2
 
-# Initialise I2C bus.
+# Inicializa el bus i2c.
 i2c = board.I2C()
 
 
 
-# Talk to the LCD at I2C address 0x27.
-# The number of rows and columns defaults to 4x20, so those
-# arguments could be omitted in this case.
+# hace ina instanciación de el lcd
 lcd = LCD(I2CPCF8574Interface(i2c, 0x27), num_rows=2, num_cols=16)
 
+#muestra texto en lcd (posición 0,0)
 lcd.print("Hola")
 
+# limpia pantalla
 #lcd.clear()
 
-# Start at the second line, from 0.
+# muestra algo en inicio de  segunda fila
 lcd.set_cursor_pos(1, 0)
 lcd.print("Acá estamos")
 
-# Make the cursor visible as a line.
+# mustrar el cursos como línea
 lcd.set_cursor_mode(CursorMode.LINE)
 
