@@ -1,4 +1,4 @@
-![Kit](https://github.com/Universidad-Cenfotec/ExpoCenfo/blob/main/kitExpoCenfo.jpeg)
+![Kit](https://github.com/Universidad-Cenfotec/ExpoCenfo/blob/main/kitExpoCenfo.jpg)
 
 # ExpoCenfo
 
