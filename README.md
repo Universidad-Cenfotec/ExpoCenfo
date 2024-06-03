@@ -4,10 +4,11 @@
 
 Documentación del Kit para el evento ExpoCenfo de Universidad Cenfotec. ExpoCenfo es una feria para estudaintes de CENFOTEC donde ellos y ellas ueden desarrollar proyectos para el desarrollo de sistemas ciberfísicos.
 
-## Proyectos para participar
-Todos los proyectos presentados deberán ser un Sistema Ciberfísico (SCF) que se incorpore al cuerpo de humanos o animales, abordando temáticas relacionadas con el bienestar, deporte, juegos, esparcimiento, música, arte, dispositivos médicos, biónica, aplicaciones de telemedicina, monitoreo de datos de salud, tecnologías de asistencia para personas con discapacidades, entre otros. Los wearables (vestibles) propuestos deben tener una función concreta y clara en el ámbito del bienestar.
+## Olimpiadas de Computación (ExpoCenfo)
 
-El reglamento completo del desarrollo y presentación de proyectos lo puede encontrar en este [link](https://drive.google.com/file/d/1g3BBKms52djUdpZYteMOwdJ43OsLNQ7t/view?usp=sharing)
+Es una competencia nacional abierta a todos los estudiantes que cursan alguna carrera universitaria, de cualquier área. En esta competencia tendrás la oportunidad de poner a prueba tus habilidades en el desarrollo de sistemas ciberfísicos, utilizando creatividad e ingenio para crear soluciones innovadoras y prácticas.
+
+El reglamento completo del desarrollo y presentación de proyectos lo puede encontrar en este [link](https://ucenfotec.ac.cr/expocenfo/)
 
 
 ## ExpoCenfo Kit
@@ -15,9 +16,13 @@ El reglamento completo del desarrollo y presentación de proyectos lo puede enco
 A cada equipo participante se le entregarán dos kits que contienen:
 
 1. Microcontrolador [IdeaBoard](https://www.crcibernetica.com/crcibernetica-ideaboard/) (ESP32)
-2. [Potenciómetro](https://www.crcibernetica.com/rotary-potentiometer/) 
-3. Switch
-4. Cables para pruebas
+2. [Joystick]((https://www.crcibernetica.com/dual-axis-xy-joystick-module/) 
+3. [Pantalla LCD 16 x 2](https://www.crcibernetica.com/16x2-lcd-with-i2c-blue/)
+4. [Módulo RFID](https://www.crcibernetica.com/rc522-rfid-module/)
+5. [Relay 2 canales](https://www.crcibernetica.com/2-channel-5v-relay-module/)
+6. [lector código QR](https://www.crcibernetica.com/tiny-code-reader-from-useful-sensors/)
+7. Adaptador
+8. Cables varios (USB y jumper)
 
 El kit es básico y los componetes quye trae son principalmente para hacer pruebas. Para proyectos, se recom,ienda explorar todos los posibles actuadores y sensores diponibles en [CrCibernetica](https://www.crcibernetica.com/)
 
