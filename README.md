@@ -16,7 +16,7 @@ El reglamento completo del desarrollo y presentación de proyectos lo puede enco
 A cada equipo participante se le entregarán dos kits que contienen:
 
 1. Microcontrolador [IdeaBoard](https://www.crcibernetica.com/crcibernetica-ideaboard/) (ESP32)
-2. [Joystick]((https://www.crcibernetica.com/dual-axis-xy-joystick-module/) 
+2. [Joystick](https://www.crcibernetica.com/dual-axis-xy-joystick-module/) 
 3. [Pantalla LCD 16 x 2](https://www.crcibernetica.com/16x2-lcd-with-i2c-blue/)
 4. [Módulo RFID](https://www.crcibernetica.com/rc522-rfid-module/)
 5. [Relay 2 canales](https://www.crcibernetica.com/2-channel-5v-relay-module/)
