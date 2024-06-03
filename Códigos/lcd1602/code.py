@@ -6,8 +6,6 @@
 import time
 import board
 import busio
-#lib https://github.com/dhalbert/CircuitPython_LCD
-#or  https://github.com/maystar/I2C_HD77480_LCD
 from lcd import LCD
 from i2c_pcf8574_interface import I2CPCF8574Interface
 from lcd import CursorMode
