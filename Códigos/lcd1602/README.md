@@ -1,6 +1,6 @@
 # Ejemplo sencillo de LCD con ESP32 y CircuitPython
 
-Código para utilizar la pantalla LCD 16 x 2, con conexión i2c. Utilizar el código `code.py`. Asegurarse de incluir los archivos `lcd.py` y `i2c_pcf8574_interface.py`. Esta librería fue tomada y modificada de este [sitio](https://wokwi.com/projects/380230722673959937)
+Código para utilizar la pantalla LCD 16 x 2 ([como esta](https://www.crcibernetica.com/16x2-lcd-with-i2c-blue/)), con conexión i2c. Utilizar el código `code.py`. Asegurarse de incluir los archivos `lcd.py` y `i2c_pcf8574_interface.py`. Esta librería fue tomada y modificada de este [sitio](https://wokwi.com/projects/380230722673959937)
 
 ## Funciones de `lcd`
 
