@@ -16,11 +16,11 @@ El reglamento completo del desarrollo y presentación de proyectos lo puede enco
 A cada equipo participante se le entregarán dos kits que contienen:
 
 1. Microcontrolador [IdeaBoard](https://www.crcibernetica.com/crcibernetica-ideaboard/) (ESP32)
-2. [Joystick](https://www.crcibernetica.com/dual-axis-xy-joystick-module/) 
-3. [Pantalla LCD 16 x 2](https://www.crcibernetica.com/16x2-lcd-with-i2c-blue/)
-4. [Módulo RFID](https://www.crcibernetica.com/rc522-rfid-module/)
-5. [Relay 2 canales](https://www.crcibernetica.com/2-channel-5v-relay-module/)
-6. [lector código QR](https://www.crcibernetica.com/tiny-code-reader-from-useful-sensors/)
+2. [Joystick](https://www.crcibernetica.com/dual-axis-xy-joystick-module/) [Ejemplo de uso](https://github.com/Universidad-Cenfotec/ExpoCenfo/tree/main/C%C3%B3digos%20por%20sensor/dual_axis_joystick)
+3. [Pantalla LCD 16 x 2](https://www.crcibernetica.com/16x2-lcd-with-i2c-blue/) [Ejemplo de uso](https://github.com/Universidad-Cenfotec/ExpoCenfo/tree/main/C%C3%B3digos%20por%20sensor/lcd1602)
+4. [Módulo RFID](https://www.crcibernetica.com/rc522-rfid-module/) [Ejemplo de uso](https://github.com/Universidad-Cenfotec/ExpoCenfo/tree/main/C%C3%B3digos%20por%20sensor/rfid_rc522)
+5. [Relay 2 canales](https://www.crcibernetica.com/2-channel-5v-relay-module/) [Ejemplo de uso](https://github.com/Universidad-Cenfotec/ExpoCenfo/tree/main/C%C3%B3digos%20por%20sensor/2_relay_module)
+6. [lector código QR](https://www.crcibernetica.com/tiny-code-reader-from-useful-sensors/) [Ejemplo de uso](https://github.com/Universidad-Cenfotec/ExpoCenfo/tree/main/C%C3%B3digos%20por%20sensor/tiny_code_reader)
 7. Adaptador
 8. Cables varios (USB y jumper)
 
