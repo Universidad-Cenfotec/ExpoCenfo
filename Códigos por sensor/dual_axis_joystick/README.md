@@ -1,4 +1,4 @@
-### Descripción del Código
+### Descripción del Código ControladorJoystickDireccional.py
 
 Este código está diseñado para leer y procesar los valores de un joystick de dos ejes conectado a un microcontrolador compatible con CircuitPython. El programa realiza una calibración inicial para determinar los valores promedio (cero) del joystick y luego, en un bucle infinito, lee los valores ajustados del joystick para determinar su posición.
 
