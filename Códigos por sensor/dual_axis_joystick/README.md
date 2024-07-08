@@ -70,7 +70,7 @@ Este código está diseñado para leer y procesar los valores de un joystick de 
      - Imprime los valores ajustados de `x` e `y`.
      - Espera `0.1` segundos antes de la siguiente lectura.
 
-### Descripción del Código
+### Descripción del Código CalibradorJoystickAndCardinalPoints.py
 
 Este código está diseñado para leer y procesar los valores de un joystick de dos ejes conectado a un microcontrolador compatible con CircuitPython. El programa realiza una calibración inicial para determinar los valores promedio (cero) del joystick, y luego en un bucle infinito, lee los valores ajustados del joystick y determina la dirección en la que está siendo movido.
 
