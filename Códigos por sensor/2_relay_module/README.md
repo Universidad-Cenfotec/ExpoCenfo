@@ -1,5 +1,3 @@
-Entendido, entonces el código está diseñado para controlar dos relés conectados a los pines `IO27` e `IO33`. Aquí está la explicación del código actualizado para reflejar esto:
-
 ### Descripción del Código
 
 Este código está diseñado para controlar dos relés conectados a un microcontrolador compatible con CircuitPython y la biblioteca `IdeaBoard`. Alterna el encendido y apagado de los relés conectados a los pines `IO27` e `IO33` cada tres segundos.
