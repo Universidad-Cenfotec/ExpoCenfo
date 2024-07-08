@@ -2,7 +2,7 @@
 
 # ExpoCenfo
 
-Documentación del Kit para el evento ExpoCenfo de Universidad Cenfotec. ExpoCenfo es una feria para estudaintes de CENFOTEC donde ellos y ellas ueden desarrollar proyectos para el desarrollo de sistemas ciberfísicos.
+Documentación del Kit para el evento ExpoCenfo de Universidad Cenfotec. ExpoCenfo es una feria para estudiantes de CENFOTEC donde ellos y ellas ueden desarrollar proyectos para el desarrollo de sistemas ciberfísicos.
 
 ## Olimpiadas de Computación (ExpoCenfo)
 
