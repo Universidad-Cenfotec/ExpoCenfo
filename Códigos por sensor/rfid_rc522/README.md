@@ -201,7 +201,7 @@ Este código está diseñado para escribir datos en una tarjeta RFID usando el l
   
 
 
-### Descripción del Código rfid-demo.py
+## Descripción del Código rfid-demo.py
 
 Este código está diseñado para leer datos de una tarjeta RFID utilizando el lector MFRC522 y un microcontrolador compatible con CircuitPython y la biblioteca `IdeaBoard`. Dependiendo del valor leído de la tarjeta RFID, se cambia el color de un LED RGB en la `IdeaBoard`.
 
