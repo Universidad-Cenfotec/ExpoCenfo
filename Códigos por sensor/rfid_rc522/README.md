@@ -198,4 +198,91 @@ Este código está diseñado para escribir datos en una tarjeta RFID usando el l
    ```
 
    - Ejecuta la función `escribir_tarjeta()` en un bucle infinito para seguir escribiendo datos en las tarjetas detectadas.
+  
 
+
+### Descripción del Código rfid-demo.py
+
+Este código está diseñado para leer datos de una tarjeta RFID utilizando el lector MFRC522 y un microcontrolador compatible con CircuitPython y la biblioteca `IdeaBoard`. Dependiendo del valor leído de la tarjeta RFID, se cambia el color de un LED RGB en la `IdeaBoard`.
+
+### Explicación del Código
+
+1. **Importaciones y Configuración Inicial**
+   ```python
+   import time
+   import board
+   from ideaboard import IdeaBoard
+   import mfrc522
+   ```
+
+   - `time`: Módulo para manejar tiempos de espera.
+   - `board`: Módulo que proporciona acceso a los pines del microcontrolador.
+   - `ideaboard`: Módulo específico para el manejo de `IdeaBoard`.
+   - `mfrc522`: Biblioteca para interactuar con el lector RFID MFRC522.
+
+2. **Inicialización de IdeaBoard y el Lector RFID**
+   ```python
+   ib = IdeaBoard()
+   reader = mfrc522.MFRC522(board.SCK, board.MOSI, board.MISO, board.IO4, board.IO5)
+   ```
+
+   - `ib` es una instancia de `IdeaBoard`, utilizada para interactuar con los pines del microcontrolador.
+   - `reader` es una instancia de `MFRC522`, configurada con los pines necesarios para la comunicación SPI con el lector RFID.
+
+3. **Función para Leer la Tarjeta RFID**
+   ```python
+   def leer_tag(rdr):
+       rdr.set_antenna_gain(0x07 << 4)
+       print("leyendo...")
+       
+       while True:
+           (stat, tag_type) = rdr.request(rdr.REQIDL)
+           if stat == rdr.OK:
+               (stat, raw_uid) = rdr.anticoll()
+               if stat == rdr.OK:
+                   print(f"Tipo de tag: {tag_type:#x}")
+                   print(f"UID: {raw_uid[0]:#x}{raw_uid[1]:x}{raw_uid[2]:x}{raw_uid[3]:x}")
+                   if rdr.select_tag(raw_uid) == rdr.OK:
+                       key = [0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF]
+                       if rdr.auth(rdr.AUTHENT1A, 8, key, raw_uid) == rdr.OK:
+                           data = rdr.read(8)
+                           rdr.stop_crypto1()
+                           return data
+                       else:
+                           print("Error de autenticacion")
+                   else:
+                       print("Tag no seleccionado")
+   ```
+
+   - `leer_tag(rdr)`: Función que lee y autentica una tarjeta RFID.
+     - `rdr.set_antenna_gain(0x07 << 4)`: Ajusta la ganancia de la antena del lector RFID.
+     - En un bucle infinito:
+       - `rdr.request(rdr.REQIDL)`: Solicita una tarjeta en el campo del lector.
+       - Si se detecta una tarjeta:
+         - `rdr.anticoll()`: Realiza un anticollision para obtener el UID de la tarjeta.
+         - Si se obtiene el UID correctamente:
+           - `rdr.select_tag(raw_uid)`: Selecciona la tarjeta.
+           - Si la selección es exitosa:
+             - `rdr.auth(rdr.AUTHENT1A, 8, key, raw_uid)`: Autentica el bloque 8 de la tarjeta con una clave predeterminada.
+             - Si la autenticación es exitosa:
+               - `rdr.read(8)`: Lee datos del bloque 8.
+               - `rdr.stop_crypto1()`: Detiene la encriptación.
+               - Retorna los datos leídos.
+           - Maneja errores de autenticación y selección de tarjeta.
+
+4. **Bucle Principal para Leer y Procesar Datos de la Tarjeta RFID**
+   ```python
+   while True:
+       data = leer_tag(reader)
+       print(f"Data: {data[0]}")
+       if data[0] == 255:
+           ib.pixel = (255, 0, 0)
+       elif data[0] == 0:
+           ib.pixel = (0, 255, 0)
+   ```
+
+   - En un bucle infinito:
+     - Llama a `leer_tag(reader)` para leer datos de la tarjeta RFID.
+     - Imprime el primer byte de los datos leídos.
+     - Si el primer byte es `255`, cambia el color del LED RGB a rojo (`ib.pixel = (255, 0, 0)`).
+     - Si el primer byte es `0`, cambia el color del LED RGB a verde (`ib.pixel = (0, 255, 0)`).
