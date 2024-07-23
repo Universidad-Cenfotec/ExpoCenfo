@@ -44,6 +44,7 @@ Estos videos son parte de un microcurso que se impartió en CENFOTEC para aprend
 - [Video Tutorial Parte II: Varios de IoT y Librerías](https://youtu.be/Ed3BFiMo_tY?si=5UAHB34kgD7ZT3RM)
 - [Video Tutorial Parte III: IoT con CircuitPython](https://youtu.be/1aXwTrAR5QA?si=KLa7RlJ8SpvxPVul)
 - [Video Tutorial Parte IV: IoT con NodeJS](https://youtu.be/4VtHSmRi3bw?si=9nALwzm9K9zSWp4J)
+- [Video uso de RFID](https://drive.google.com/file/d/1kd8bt60hpLAdlT1D70QFL1xkntsTEQJz/view?usp=sharing)
 
 ### Videos Instructivos Cortos
 
