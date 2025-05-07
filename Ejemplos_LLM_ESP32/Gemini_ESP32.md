@@ -1,8 +1,8 @@
 # **Cómo conectar Gemini AI a un ESP32 — Guía paso a paso**
 
-Tomás de Camino Beck, Ph.D.
-Director de Escuea de Sistemas INteligentes
-Universidad Cenfotec
+Tomás de Camino Beck, Ph.D.  
+Director de Escuea de Sistemas Inteligentes  
+Universidad Cenfotec  
 
 Con esta guía podrás hacer que tu ESP32 sea un asistente inteligente que se comunique con Gemini AI para responder cualquier pregunta.
 
