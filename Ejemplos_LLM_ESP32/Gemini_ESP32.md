@@ -58,7 +58,77 @@ Con esta guía podrás hacer que tu ESP32 sea un asistente inteligente que se co
 
 ---
 
-## **Paso 3: Preparar el ESP32 en Arduino IDE**
+## **Paso 3: Preparar el ESP32**
+
+### En Thonny con CitcuitPython
+
+```python
+import time
+import wifi
+import socketpool
+import ssl
+import adafruit_requests as requests
+import json
+from secrets import secrets  # Archivo con tus credenciales
+
+# --- CONEXIÓN A INTERNET ---
+print("Conectando al WiFi...")
+wifi.radio.connect(secrets["ssid"], secrets["password"])
+print("Conectado a", secrets["ssid"])
+print("Dirección IP:", wifi.radio.ipv4_address)
+
+# --- CONFIGURACIÓN DE SESIÓN HTTPS ---
+socket = socketpool.SocketPool(wifi.radio)
+https = requests.Session(socket, ssl.create_default_context())
+
+# --- CONFIGURACIÓN DE GEMINI ---
+api_key = secrets["api_key"]
+endpoint = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={api_key}"
+
+def preguntar_gemini(pregunta):
+    headers = {"Content-Type": "application/json"}
+    payload = {
+        "contents": [{
+            "parts": [{"text": pregunta}]
+        }],
+        "generationConfig": {
+            "maxOutputTokens": 100
+        }
+    }
+
+    print("Enviando pregunta a Gemini...")
+    response = https.post(endpoint, headers=headers, json=payload)
+    if response.status_code == 200:
+        data = response.json()
+        print("Respuesta de Gemini:")
+        print(data["candidates"][0]["content"]["parts"][0]["text"])
+    else:
+        print("Error:", response.status_code)
+        print(response.text)
+
+# --- LOOP PRINCIPAL ---
+while True:
+    try:
+        pregunta = input("Escribe tu pregunta:\n")
+        if pregunta:
+            preguntar_gemini(pregunta)
+        print("-" * 40)
+    except Exception as e:
+        print("Error:", e)
+    time.sleep(5)
+```
+
+Crear el archivo `secrets.py` con el siguiente código:
+
+```python
+secrets = {
+    "ssid": "TU_SSID",
+    "password": "TU_PASSWORD",
+    "api_key": "TU_API_KEY"
+}
+```
+
+### En Arduino IDE con C/C++**
 
 1. Abre Arduino IDE e instala las librerías necesarias para conectarse a internet (`WiFi.h`, `HTTPClient.h`).
 2. Carga el siguiente código base:
