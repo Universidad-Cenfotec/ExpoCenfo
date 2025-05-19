@@ -20,7 +20,7 @@ Con esta guía podrás hacer que tu ESP32 sea un asistente inteligente que se co
 
 ## **Paso 1: Obtener la API Key de Gemini**
 
-1. Entra a [Gemini API Docs](https://ai.google.dev/) buscando en Google "Gemini API docs".
+1. Entra a [Gemini API Docs](https://ai.google.dev/gemini-api/docs) buscando en Google "Gemini API docs".
 2. Haz clic en el primer enlace.
 3. Marca todas las casillas y haz clic en **Continue**.
 4. Crea un proyecto y genera tu **API Key**.
