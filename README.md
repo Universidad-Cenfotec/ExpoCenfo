@@ -8,6 +8,10 @@ El desafío consiste en diseñar y programar soluciones inteligentes capaces de 
 
 EXPOCENFO 2025 representa una oportunidad única para que los estudiantes universitarios desarrollen sistemas ciberfísicos avanzados, donde la creatividad, el pensamiento computacional y el dominio técnico convergen para dar forma al futuro de la computación embebida con inteligencia artificial.
 
+## Kit ExpoCenfo
+
+EL kit ExpoCenfo consiste en una placa IdeaBoard (que es un ESP32) y un potenciómetro (para pruebas), que se entrega de forma gratuita a todos y todas las participantes en el reto. Además en el Makerspace CENFOTEC, se cuentan con una colección de sensores y actuadores, que pueden ser utilizados por los participantes para sus proyectos.
+
 ¡Que comience el reto!
 
 ---
