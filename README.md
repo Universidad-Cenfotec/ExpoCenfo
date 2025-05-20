@@ -29,7 +29,7 @@ EL kit ExpoCenfo consiste en una placa IdeaBoard (que es un ESP32) y un potenci�
 
 ## Sistemas ciberfísicos Inteligentes
 
-
+![arq_sis](https://github.com/Universidad-Cenfotec/ExpoCenfo/blob/main/documentos/Arq_Sist.png)
 
 Este esquema representa un sistema ciberfísico inteligente en el que un microcontrolador (como el IdeaBoard basado en ESP32) actúa como puente entre el entorno físico y un modelo de lenguaje en la nube, como Gemini o ChatGPT. El sistema percibe el entorno mediante sensores que recogen información relevante (como temperatura, luz, sonido o movimiento), y esa información es procesada por el microcontrolador, el cual genera un **prompt** que describe el contexto o plantea una consulta. A través de una conexión WiFi y una clave de API, ese prompt se envía a un modelo de lenguaje avanzado alojado en la nube.
 
