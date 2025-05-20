@@ -13,7 +13,7 @@ girar 90
 parar
 ```
 
-Este enfoque permite separar la **lógica del hardware** de la **interacción humana**, facilitando la enseñanza y el control remoto del robot.
+Este enfoque permite separar la **lógica del hardware** de la **interacción humana**, facilitando códigos dinámicos.
 
 ---
 
@@ -47,7 +47,7 @@ Esta función ayuda al intérprete a **entender los parámetros**. Por ejemplo, 
 
 ---
 
-### 2. `code.py`: el programa principal
+### 2. `Ejemplo_Interprete.py`: el programa principal
 
 Este archivo es el que corre en el microcontrolador (por ejemplo, un ESP32 o un Circuit Playground).
 
