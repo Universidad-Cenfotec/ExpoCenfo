@@ -18,6 +18,7 @@ EL kit ExpoCenfo consiste en una placa IdeaBoard (que es un ESP32) y un potenci√
 ## Contenidos del repositorio
 
 ### C√≥digos y Ejemplos
+- [Video de como trabajar con el IdeaBoard y Circuit Python](https://youtu.be/GzA7peI1woc?si=t7AypJyVjUAOKnQ7)
 - [Ejemplo de uso de DeepSeek local con EPS32 (IdeaBoard)](https://github.com/Universidad-Cenfotec/ExpoCenfo/blob/main/Ejemplos_LLM_ESP32/ESP32_Ollama_Guide.md)
 - [Ejemplo de Google Gemini con el ESP32 (IdeaBoard)](https://github.com/Universidad-Cenfotec/ExpoCenfo/blob/main/Ejemplos_LLM_ESP32/Gemini_ESP32.md)
 - [Ejemplo sencillo "Oblique Strategies", usa Gemini que comunica con ESP32](https://github.com/Universidad-Cenfotec/ExpoCenfo/tree/main/Ejemplos_LLM_ESP32/Ejemplo_Olbique_Strategies)
