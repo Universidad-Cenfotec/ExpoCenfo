@@ -1,3 +1,6 @@
+# Tomás de Camino Beck, Ph.D
+# Universidad CENFOTEC
+
 class Interprete:
     def __init__(self):
         self.comandos = {}
