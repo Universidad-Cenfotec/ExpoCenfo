@@ -107,6 +107,7 @@ def preguntar_gemini(pregunta):
         print(response.text)
 
 # --- LOOP PRINCIPAL ---
+
 try:
     pregunta = "¿Quién Eres?\n"
     if pregunta:
