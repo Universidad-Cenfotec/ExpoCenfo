@@ -86,6 +86,8 @@ Se detecta la dirección del LCD (normalmente `0x27` o `0x3F`) y se inicializa l
 
 ### 5. **Preparación de la API de Gemini**
 
+Detalles de como generar la llave de Gemini, [la pueden encontrar acá](https://github.com/Universidad-Cenfotec/ExpoCenfo/blob/main/Ejemplos_LLM_ESP32/Gemini_ESP32.md)
+
 ```python
 endpoint = f"https://...{api_key}"
 ```
