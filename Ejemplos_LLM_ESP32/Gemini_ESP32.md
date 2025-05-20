@@ -60,6 +60,8 @@ Con esta guía podrás hacer que tu ESP32 sea un asistente inteligente que se co
 
 ## **Paso 3: Preparar el ESP32**
 
+Para este paso recomendamos trabajar con Thonny, que es un software que facilita la programación de microcontroladores con Circuit Python. [Pueden ver este video para apreder sobre el IdeaBoard y Thonny](https://youtu.be/GzA7peI1woc?si=t7AypJyVjUAOKnQ7)
+
 ### En Thonny con CitcuitPython
 
 ```python
