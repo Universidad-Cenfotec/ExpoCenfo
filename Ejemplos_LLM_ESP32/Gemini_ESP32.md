@@ -107,15 +107,14 @@ def preguntar_gemini(pregunta):
         print(response.text)
 
 # --- LOOP PRINCIPAL ---
-while True:
-    try:
-        pregunta = input("Escribe tu pregunta:\n")
-        if pregunta:
-            preguntar_gemini(pregunta)
-        print("-" * 40)
-    except Exception as e:
-        print("Error:", e)
-    time.sleep(5)
+try:
+    pregunta = "¿Quién Eres?\n"
+    if pregunta:
+        preguntar_gemini(pregunta)
+    print("-" * 40)
+except Exception as e:
+    print("Error:", e)
+time.sleep(5)
 ```
 
 Crear el archivo `secrets.py` con el siguiente código:
