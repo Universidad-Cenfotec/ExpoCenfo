@@ -1,6 +1,6 @@
 # Ejemplo Oblique Strategies
 
-Tomás de Camino Beck, Ph.D
+Tomás de Camino Beck, Ph.D  
 Universidad CENFOTEC
 
 Oblique Strategies es una herramienta creativa desarrollada por el músico Brian Eno y el artista Peter Schmidt en los años 70, que consiste en una baraja de cartas con frases enigmáticas, provocativas o ambiguas, diseñadas para desbloquear bloqueos creativos. Cada carta ofrece una sugerencia o enfoque inesperado, como “Usa un error como una intención” o “Cambia el rol de los instrumentos”, que invita a reinterpretar el problema desde otro ángulo. La idea es interrumpir patrones mentales predecibles y fomentar la toma de decisiones intuitiva, especialmente útil en procesos artísticos como la música, el diseño o la escritura, aunque también puede aplicarse en otras disciplinas creativas o estratégicas.
