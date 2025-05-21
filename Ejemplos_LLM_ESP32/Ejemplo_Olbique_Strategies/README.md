@@ -27,6 +27,8 @@ Claro, aquí tienes una explicación muy didáctica del código `Oblique_Strateg
 Este programa `Oblique_Strategies.py` ejecuta en un **ESP32 con CircuitPython**. Al **presionar un botón**, el microcontrolador se conecta a internet, le **hace una pregunta a la IA de Google Gemini** y **muestra la respuesta en una pantalla LCD I2C**. La pregunta que se le hace a la IA es:
 
 > “¿Puedes generar una frase corta, estilo Oblique Strategies?”
+>
+> [Acá pueden ver el video del cósigo en ejecusión](https://drive.google.com/file/d/1CIdb4a6Evi4C7-xziNHBRx4t2QUktkgh/view?usp=sharing)
 
 ---
 
