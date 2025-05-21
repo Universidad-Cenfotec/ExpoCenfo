@@ -85,7 +85,7 @@ Si la conexión es exitosa, el dispositivo enciende el LED verde por un momento 
 
 ### 3. Preparación del acceso a Gemini
 
-El endpoint de la API se arma con la clave que está guardada en el archivo de secretos.
+El endpoint de la API se arma con la clave que está guardada en el archivo de secretos.  [Pueden seguir este tutorial para ver como se genera la llave](https://github.com/Universidad-Cenfotec/ExpoCenfo/blob/main/Ejemplos_LLM_ESP32/Gemini_ESP32.md)
 
 ```python
 api_key = secrets["api_key"]
