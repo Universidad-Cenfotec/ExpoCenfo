@@ -1,3 +1,4 @@
+![rock](https://github.com/Universidad-Cenfotec/ExpoCenfo/blob/main/Ejemplos_LLM_ESP32/Micro%20Se%20Reprograma/RockPrompt.jpeg)
 # Ejemplo de el ESP32 pidiendo a Gemini que lo reprograme
 
 Tomás de Camino Beck, Ph.D.  
