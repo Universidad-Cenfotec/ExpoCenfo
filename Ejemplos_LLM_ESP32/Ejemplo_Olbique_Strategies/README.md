@@ -10,6 +10,7 @@ En este ejemplo, utilizamos una [IdeaBoard](https://github.com/CRCibernetica/cir
 
 Aunque se trata de un caso muy sencillo, ilustra el potencial de establecer una “conversación” entre microcontroladores y modelos de lenguaje, lo cual abre nuevas posibilidades en áreas como la robótica y los sistemas ciberfísicos, donde la interacción contextual e inteligente puede marcar una diferencia significativa.
 
+
 ## Hardware
 - [Ideaboard](https://www.crcibernetica.com/crcibernetica-ideaboard/) (o cualquier ESP32)
 - [Pantalla LCD 16x2](https://www.crcibernetica.com/16x2-lcd-with-i2c-blue/?searchid=2404090&search_query=lcd)
@@ -154,5 +155,24 @@ Aquí está el corazón del programa. Hace lo siguiente en un bucle infinito:
 * Usa sensores en lugar del botón para activar la consulta.
 * Conecta un altavoz y convierte el texto en audio (text-to-speech).
 * Agrega almacenamiento para guardar un historial de frases creativas.
+
+---
+
+#Principios computacionales del ejemplo
+
+## Variabilidad generativa y complejidad computacional
+
+El hecho de que un sistema de inteligencia artificial generativo, como un modelo de lenguaje, nunca produzca exactamente la misma frase ante la misma solicitud, resulta fascinante no solo desde el punto de vista práctico, sino también teórico. Este comportamiento revela principios profundos de la complejidad computacional, la teoría de la información y los sistemas dinámicos estocásticos. Lejos de ser un defecto, la variabilidad es una propiedad esencial del diseño de estos sistemas, y está íntimamente relacionada con la forma en que modelan la creatividad y el lenguaje humano.
+
+Uno de los aspectos clave es que estos modelos no son completamente deterministas. Cuando se ajusta un parámetro como la "temperature", se introduce aleatoriedad en el proceso de generación. Esto significa que, aunque el modelo siga reglas estadísticas aprendidas de grandes volúmenes de texto, su comportamiento incorpora elementos de azar, permitiéndole explorar diferentes caminos posibles en el espacio del lenguaje. Este carácter estocástico resalta la idea de que el modelo no está simplemente buscando una única respuesta correcta, sino generando variantes plausibles dentro de una distribución de probabilidades.
+
+Además, estos modelos son altamente sensibles a las condiciones iniciales. Aunque un prompt pueda parecer idéntico, pequeñas variaciones —incluso imperceptibles a nivel de entrada o contexto— pueden dar lugar a resultados radicalmente distintos. Esta sensibilidad refleja un principio propio de los sistemas caóticos, donde el comportamiento global del sistema es profundamente dependiente de sus condiciones de partida. De esta forma, los modelos generativos actúan como sistemas dinámicos en los que el lenguaje fluye de manera impredecible pero no arbitraria.
+
+La vastedad del espacio de búsqueda lingüístico también juega un papel fundamental. El lenguaje humano permite combinar palabras y estructuras de formas casi infinitas, lo que hace que el modelo trabaje sobre un espacio de alta entropía. Cada vez que se genera una frase, el modelo recorre un camino nuevo entre millones de posibilidades, siguiendo patrones estadísticos que aseguran coherencia, pero dejando espacio para la originalidad. Este proceso pone en evidencia principios de la complejidad algorítmica y la entropía informacional, donde la riqueza de resultados posibles es no solo deseable, sino necesaria para capturar la diversidad del lenguaje humano.
+
+lo que emerge del funcionamiento del modelo es una forma de creatividad distribuida. La frase generada no es el resultado de una regla fija o una base de datos de respuestas, sino de la interacción entre millones de parámetros que codifican patrones, estilos, contextos y significados. Esta creatividad es una propiedad emergente: no reside en una parte particular del modelo, sino que surge del conjunto en funcionamiento. En este sentido, los modelos generativos encarnan un tipo de inteligencia colectiva, moldeada por los datos que han absorbido, pero capaz de producir novedades irrepetibles.
+
+En conjunto, esta capacidad para no repetir una frase exacta no es una limitación técnica, sino una manifestación del carácter complejo, probabilístico y creativo de los sistemas generativos. Nos recuerda que la computación, en su frontera más avanzada, no se trata solamente de calcular, sino de generar, explorar y sorprender.
+
 
 
