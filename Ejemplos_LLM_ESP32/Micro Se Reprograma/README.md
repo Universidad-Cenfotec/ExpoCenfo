@@ -1,7 +1,8 @@
 # Ejemplo de el ESP32 pidiendo a Gemini que lo reprograme
 
-Tomás de Camino Becl, Ph.D.  
+Tomás de Camino Beck, Ph.D.  
 Universidad CENFOTEC
+
 ---
 
 ## ¿Puede un microcontrolador reprogramarse a sí mismo?
