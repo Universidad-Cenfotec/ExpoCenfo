@@ -1,4 +1,4 @@
-![OS](https://github.com/Universidad-Cenfotec/ExpoCenfo/blob/main/Ejemplos_LLM_ESP32/Ejemplo_Olbique_Strategies/ObliqueStrategies.JPG)
+![OS](https://github.com/Universidad-Cenfotec/ExpoCenfo/blob/main/Ejemplos_LLM_ESP32/Ejemplo_Olbique_Strategies/ObliqueStrategies.jpeg)
 # Ejemplo Oblique Strategies
 
 Tomás de Camino Beck, Ph.D  
