@@ -174,5 +174,5 @@ lo que emerge del funcionamiento del modelo es una forma de creatividad distribu
 
 En conjunto, esta capacidad para no repetir una frase exacta no es una limitación técnica, sino una manifestación del carácter complejo, probabilístico y creativo de los sistemas generativos. Nos recuerda que la computación, en su frontera más avanzada, no se trata solamente de calcular, sino de generar, explorar y sorprender.
 
-
+Imaginen ahora todo este poder, pero en sistemas en el borde!, ya sea en robots o máquinas que pueden aprovechar este nivel de complejidad computacional
 
