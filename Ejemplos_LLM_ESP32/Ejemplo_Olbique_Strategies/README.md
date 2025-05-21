@@ -158,7 +158,7 @@ Aquí está el corazón del programa. Hace lo siguiente en un bucle infinito:
 
 ---
 
-#Principios computacionales del ejemplo
+# Principios computacionales del ejemplo
 
 ## Variabilidad generativa y complejidad computacional
 
