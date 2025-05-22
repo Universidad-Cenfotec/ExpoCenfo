@@ -4,7 +4,7 @@ Tomás de Camino Beck, Ph.D.
 Director de Escuea de Sistemas Inteligentes  
 Universidad Cenfotec  
 
-Con esta guía podrás hacer que tu ESP32 sea un asistente inteligente que se comunique con Gemini AI para responder cualquier pregunta.
+Con esta guía podrás hacer que tu ESP32 sea un asistente inteligente que se comunique con Gemini AI para responder cualquier pregunta. [En este link hay un vide que explica con detalles](https://youtu.be/rFI_8TIMCNI?si=Z5YtiBwS3AZMw9da)
 
 ---
 
