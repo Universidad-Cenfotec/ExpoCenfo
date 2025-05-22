@@ -1,4 +1,4 @@
-[![ExpoCenfo](https://youtu.be/sKXtmYAvaPw?si=ntqLp5BoQz63HalI)
+[![ExpoCenfo](https://youtu.be/sKXtmYAvaPw?si=ntqLp5BoQz63HalI)](https://github.com/Universidad-Cenfotec/ExpoCenfo/blob/main/expoCenfo_Intro.jpg)
 
 # ExpoCenfo 2025
 
