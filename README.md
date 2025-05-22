@@ -1,3 +1,5 @@
+[![ExpoCenfo](https://youtu.be/sKXtmYAvaPw?si=ntqLp5BoQz63HalI)
+
 # ExpoCenfo 2025
 
 La Universidad CENFOTEC se enorgullece en presentar una nueva edición de EXPOCENFO, la competencia universitaria que impulsa el ingenio, la innovación y la aplicación práctica del conocimiento en sistemas computacionales.
