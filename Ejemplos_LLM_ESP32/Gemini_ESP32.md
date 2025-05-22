@@ -165,7 +165,8 @@ secrets = {
 
 ---
 
-## **¡Listo!**
+## **Ejemplos con este código**
 
-Con estos pasos ya puedes usar Gemini en tu ESP32 como asistente AI para responder preguntas directamente desde tu proyecto de hardware.
+- [Microcontrolador pide a Gemini reprogramarse](https://github.com/Universidad-Cenfotec/ExpoCenfo/tree/main/Ejemplos_LLM_ESP32/Micro%20Se%20Reprograma)
+- [Generación de frases únicas con el microcontrolador y Gemini](https://github.com/Universidad-Cenfotec/ExpoCenfo/tree/main/Ejemplos_LLM_ESP32/Ejemplo_Olbique_Strategies)
 
