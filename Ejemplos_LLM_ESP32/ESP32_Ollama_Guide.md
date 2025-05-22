@@ -1,7 +1,7 @@
 
 # **Cómo conectar un ESP32 a un servidor local con Ollama — Guía paso a paso**
 
-Con esta guía podrás conectar tu ESP32 a un servidor Flask que utiliza un modelo local de lenguaje con **Ollama**, como `deepseek-coder`, para generar respuestas a preguntas dinámicas.
+Con esta guía podrás conectar tu ESP32 a un servidor Flask que utiliza un modelo local de lenguaje con **Ollama**, como `deepseek-coder`, para generar respuestas a preguntas dinámicas. [En este link el profesor Jorge Ortega, explcia como hacerlo](https://youtu.be/d4747ZCveP4?si=nLi5QnsJbab93LWO)
 
 ---
 
