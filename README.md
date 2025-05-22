@@ -1,6 +1,3 @@
-[![ExpoCenfo](https://github.com/Universidad-Cenfotec/ExpoCenfo/blob/main/expoCenfo_Intro.jpg)](https://youtu.be/sKXtmYAvaPw?si=QJJzsI-w2-VWVzDZ)
-
-
 # ExpoCenfo 2025
 
 La Universidad CENFOTEC se enorgullece en presentar una nueva edición de EXPOCENFO, la competencia universitaria que impulsa el ingenio, la innovación y la aplicación práctica del conocimiento en sistemas computacionales.
@@ -10,6 +7,11 @@ Este año, el reto lleva a los participantes a la frontera del desarrollo tecnol
 El desafío consiste en diseñar y programar soluciones inteligentes capaces de percibir su entorno en tiempo real y generar respuestas dinámicas procesadas por un LLM, integrando sensores, procesamiento local y capacidades de lenguaje natural en el borde.
 
 EXPOCENFO 2025 representa una oportunidad única para que los estudiantes universitarios desarrollen sistemas ciberfísicos avanzados, donde la creatividad, el pensamiento computacional y el dominio técnico convergen para dar forma al futuro de la computación embebida con inteligencia artificial.
+
+
+Ver video de introducción:
+[![ExpoCenfo](https://github.com/Universidad-Cenfotec/ExpoCenfo/blob/main/expoCenfo_Intro.jpg)](https://youtu.be/sKXtmYAvaPw?si=QJJzsI-w2-VWVzDZ)
+
 
 ## Kit ExpoCenfo
 
