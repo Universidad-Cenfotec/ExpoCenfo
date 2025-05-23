@@ -12,6 +12,8 @@ EXPOCENFO 2025 representa una oportunidad única para que los estudiantes univer
 Ver video de introducción:
 [![ExpoCenfo](https://github.com/Universidad-Cenfotec/ExpoCenfo/blob/main/expoCenfo_Intro.jpg)](https://youtu.be/sKXtmYAvaPw?si=QJJzsI-w2-VWVzDZ)
 
+**ExpoCEnfo está abierto a todos y todas las etudaintes universidatias. [Información en este link](https://ucenfotec.ac.cr/expocenfo/)**
+
 
 ## Kit ExpoCenfo
 
