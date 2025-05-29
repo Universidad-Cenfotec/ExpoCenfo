@@ -2,7 +2,7 @@
 
 La Universidad CENFOTEC se enorgullece en presentar una nueva edición de EXPOCENFO, la competencia universitaria que impulsa el ingenio, la innovación y la aplicación práctica del conocimiento en sistemas computacionales.
 
-**ExpoCenfo está abierto a todos y todas las etudaintes universidatias. [Información de inscripción en este link](https://ucenfotec.ac.cr/expocenfo/)**
+>**ExpoCenfo está abierto a todos y todas las etudiantes universitarias. [Información de inscripción en este link](https://ucenfotec.ac.cr/expocenfo/)**
 
 Este año, el reto lleva a los participantes a la frontera del desarrollo tecnológico: la construcción de sistemas computacionales ejecutados en microcontroladores, potenciados por Modelos de Lenguaje de Gran Escala (LLMs).
 
@@ -14,7 +14,7 @@ EXPOCENFO 2025 representa una oportunidad única para que los estudiantes univer
 Ver video de introducción:
 [![ExpoCenfo](https://github.com/Universidad-Cenfotec/ExpoCenfo/blob/main/expoCenfo_Intro.jpg)](https://youtu.be/sKXtmYAvaPw?si=QJJzsI-w2-VWVzDZ)
 
-**ExpoCenfo está abierto a todos y todas las etudaintes universidatias. [Información de inscripción en este link](https://ucenfotec.ac.cr/expocenfo/)**
+**ExpoCenfo está abierto a todos y todas las etudiantes universitarias. [Información de inscripción en este link](https://ucenfotec.ac.cr/expocenfo/)**
 
 
 ## Kit ExpoCenfo
