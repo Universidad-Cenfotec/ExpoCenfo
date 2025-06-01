@@ -108,7 +108,7 @@ requests
 ```yaml
 services:
   - type: web
-    name: mcp-melodia
+    name: mcp-server
     env: python
     plan: free
     buildCommand: pip install -r requirements.txt
@@ -234,7 +234,7 @@ Ubicado en `secrets.py`:
 secrets = {
     "ssid": "NOMBRE_DE_TU_WIFI",
     "password": "CONTRASEÑA_WIFI",
-    "url_mcp": "https://mcp-melodia.onrender.com"
+    "url_mcp": "https://<tu-subdominio>.onrender.com"
 }
 ```
 
