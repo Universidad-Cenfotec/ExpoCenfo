@@ -1,4 +1,4 @@
-# Tutorial: Comunicación de un ESP32 con un servidor MCP usando IA generativa
+# Tutorial: Comunicación de un ESP32 con un servidor MCP (Model Context Protocol) usando IA generativa
 
 Tomás de Camino Beck, Ph.D.  
 Universidad CENFOTEC
