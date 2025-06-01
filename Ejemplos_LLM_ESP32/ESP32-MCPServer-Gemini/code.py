@@ -12,7 +12,7 @@ import adafruit_ahtx0
 import pwmio
 from lcd import LCD, CursorMode
 from i2c_pcf8574_interface import I2CPCF8574Interface
-from secrets_MCP import secrets
+from secrets import secrets
 
 wifi.radio.connect(secrets["ssid"], secrets["password"])
 pool = socketpool.SocketPool(wifi.radio)
