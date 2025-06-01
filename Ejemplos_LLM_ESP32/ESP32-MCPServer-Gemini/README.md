@@ -246,6 +246,8 @@ Este sistema demuestra cómo dispositivos en el borde pueden operar bajo control
 
 ## Explicación general de la arquitectura
 
+![arq](https://github.com/Universidad-Cenfotec/ExpoCenfo/blob/main/Ejemplos_LLM_ESP32/ESP32-MCPServer-Gemini/Arquitectura_ESP32_MCP_Gemini.png)
+
 La imagen representa una arquitectura típica de **sistemas ciberfísicos inteligentes**, en la que un microcontrolador (en este caso, un **IdeaBoard basado en ESP32**) interactúa con su entorno mediante sensores y actuadores, y amplía su capacidad de decisión conectándose a un modelo de lenguaje de gran escala (LLM) a través de un **servidor MCP (Model Context Protocol)**.
 
 ### Componentes:
