@@ -243,6 +243,7 @@ secrets = {
 ## Notas finales
 
 Este sistema demuestra cómo dispositivos en el borde pueden operar bajo control flexible mediante instrucciones generadas por LLMs. En lugar de tener un comportamiento fijo, el microcontrolador cambia su acción en función de la entrada contextual, modelada a través de prompts generativos. Esta arquitectura representa una nueva frontera para sistemas embebidos, control adaptativo e inteligencia ambiental distribuida.
+
 ---
 
 ## Explicación general de la arquitectura
