@@ -228,7 +228,7 @@ while True:
 
 ## Archivo: `secrets.py`
 
-Ubicado en `esp32/secrets_MCP.py`:
+Ubicado en `secrets.py`:
 
 ```python
 secrets = {
