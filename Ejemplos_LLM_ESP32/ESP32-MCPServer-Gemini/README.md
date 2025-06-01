@@ -120,7 +120,7 @@ services:
 1. Sube estos archivos a un repositorio en GitHub.
 2. Ingresa a [Render.com](https://render.com), conecta tu cuenta de GitHub y crea un nuevo servicio web.
 3. Selecciona tu repositorio, asegúrate de que detecte el archivo `render.yaml`.
-4. Render desplegará el servidor y te dará una URL del tipo `https://mcp-melodia.onrender.com`.
+4. Render desplegará el servidor y te dará una URL del tipo `https://mcp-server.onrender.com`.
 
 ---
 
