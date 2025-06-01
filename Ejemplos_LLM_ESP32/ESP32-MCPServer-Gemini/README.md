@@ -38,12 +38,10 @@ mcp-melodia/
 ├── main.py                 # Servidor FastAPI (MCP)
 ├── requirements.txt        # Dependencias para Render
 ├── render.yaml             # Configuración del servicio Render
-│
-└── esp32/
-    ├── main.py             # Código del ESP32 con LCD y buzzer
-    ├── secrets_MCP.py      # WiFi y URL del MCP
-    ├── lcd.py              # Driver para la pantalla LCD (PCF8574)
-    └── i2c_pcf8574_interface.py  # Interfaz I2C del LCD
+├── code.py             # Código del ESP32 con LCD y buzzer
+├── secrets.py      # WiFi y URL del MCP
+├── lcd.py              # Driver para la pantalla LCD (PCF8574)
+├── i2c_pcf8574_interface.py  # Interfaz I2C del LCD
 ```
 
 ---
