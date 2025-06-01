@@ -60,10 +60,14 @@ API_KEY = "TU_API_KEY_DE_GEMINI"
 ENDPOINT = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={API_KEY}"
 
 TEMPLATE = """
+Basado en los siguientes datos:
+Ubicación: {location}
+Tipo de cultivo: {plant_type}
+Humedad del suelo: {soil_moisture}%
 Temperatura: {temperature}°C
 Humedad relativa: {humidity}%
 
-Genera una melodía breve en formato "nota,duración,nota,duración,...", usando notas musicales estándar (C3 a C6 y R para silencios). Ideal para expresar el estado ambiental de una planta.
+Genera una melodía breve y alegre en formato "nota,duración,nota,duración,...", usando notas musicales estándar de C3,C#3, hasta c7 y R para silencios), ideal para representar el estado del cultivo en forma musical. que las duraciones vayan entre 0 y 1. EN la respuesta solo quiero la melodía, sin texto antes ni depues.
 """
 
 class ContextData(BaseModel):
@@ -121,7 +125,7 @@ services:
 
 ## Parte 2: Código para el ESP32
 
-Ubicado en `esp32/main.py`:
+Ubicado en `code.py`:
 
 ```python
 # Tomás de Camino Beck - Universidad CENFOTEC
@@ -221,7 +225,7 @@ while True:
 
 ---
 
-## Archivo: `secrets_MCP.py`
+## Archivo: `secrets.py`
 
 Ubicado en `esp32/secrets_MCP.py`:
 
