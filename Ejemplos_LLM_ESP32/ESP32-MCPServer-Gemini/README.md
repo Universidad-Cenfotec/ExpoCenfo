@@ -3,6 +3,9 @@
 Tomás de Camino Beck, Ph.D.  
 Universidad CENFOTEC
 
+![ESP32](https://github.com/Universidad-Cenfotec/ExpoCenfo/blob/main/Ejemplos_LLM_ESP32/ESP32-MCPServer-Gemini/ESP32_MCP.JPG)
+
+
 Este tutorial muestra cómo un microcontrolador ESP32 puede comunicarse con un servidor MCP (Model Context Protocol) desplegado en la nube, enviar información contextual (temperatura y humedad) y recibir una secuencia de instrucciones generadas por un modelo de lenguaje (LLM), en este caso una melodía. Aunque el ejemplo es trivial, ilustra cómo un dispositivo en el borde puede adaptar su comportamiento dinámicamente en función del contexto ambiental, delegando el razonamiento de alto nivel a una IA generativa.
 
 Este enfoque permite crear arquitecturas distribuidas donde el comportamiento de los dispositivos no está preprogramado, sino que es generado en tiempo real por un sistema inteligente, abriendo nuevas posibilidades en robótica, agricultura de precisión, educación y sistemas ciberfísicos adaptativos.
