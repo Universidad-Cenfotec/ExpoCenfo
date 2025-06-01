@@ -16,7 +16,7 @@ Este enfoque permite crear arquitecturas distribuidas donde el comportamiento de
 * ESP32 con CircuitPython
 * Sensor AHT20 (temperatura y humedad)
 * Pantalla LCD con controlador PCF8574 (opcional pero recomendado)
-* Buzzer pasivo conectado a IO26
+* Buzzer o parlante pasivo conectado a IO26
 * Botón conectado a IO0
 
 ### Software
