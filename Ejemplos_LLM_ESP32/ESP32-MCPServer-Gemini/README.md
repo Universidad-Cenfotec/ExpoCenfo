@@ -242,3 +242,47 @@ secrets = {
 ## Notas finales
 
 Este sistema demuestra cómo dispositivos en el borde pueden operar bajo control flexible mediante instrucciones generadas por LLMs. En lugar de tener un comportamiento fijo, el microcontrolador cambia su acción en función de la entrada contextual, modelada a través de prompts generativos. Esta arquitectura representa una nueva frontera para sistemas embebidos, control adaptativo e inteligencia ambiental distribuida.
+---
+
+## Explicación general de la arquitectura
+
+La imagen representa una arquitectura típica de **sistemas ciberfísicos inteligentes**, en la que un microcontrolador (en este caso, un **IdeaBoard basado en ESP32**) interactúa con su entorno mediante sensores y actuadores, y amplía su capacidad de decisión conectándose a un modelo de lenguaje de gran escala (LLM) a través de un **servidor MCP (Model Context Protocol)**.
+
+### Componentes:
+
+1. **Entorno**
+
+   * Es el mundo físico en el que opera el sistema.
+   * Proporciona señales que el microcontrolador puede medir (por ejemplo, temperatura, humedad, luz) y sobre el cual puede actuar (por ejemplo, activando un motor o emitiendo sonido).
+
+2. **Microcontrolador (IdeaBoard–ESP32)**
+
+   * Mide variables del entorno a través de sensores.
+   * Envía los datos recogidos como **parámetros en formato JSON** al servidor MCP.
+   * Recibe de vuelta instrucciones generadas por la IA, que pueden alterar su comportamiento (como tocar una melodía o realizar un movimiento).
+
+3. **Servidor MCP**
+
+   * Su función es traducir los datos del microcontrolador en un **prompt textual**, es decir, una solicitud en lenguaje natural que será enviada al modelo de lenguaje.
+   * Se comunica con el LLM mediante una **API** y recibe una **respuesta generativa**.
+   * Procesa esta respuesta y la convierte en instrucciones estructuradas que el microcontrolador puede interpretar.
+
+4. **Modelo de Lenguaje (LLM: Gemini, ChatGPT, etc.)**
+
+   * Procesa el prompt generado por el MCP y produce una salida que no está predefinida, sino que se genera a partir de patrones aprendidos por el modelo.
+   * Esta salida puede ser una melodía, una secuencia de instrucciones, una tabla de transiciones, o incluso código.
+
+### Flujo general:
+
+* El **microcontrolador mide el entorno** (por ejemplo, detecta temperatura y humedad).
+* Envía los datos al **servidor MCP**, que construye un **prompt** como:
+  *“Genera una melodía basada en temperatura 24.5°C y humedad 70%”*.
+* El prompt es enviado a un **modelo de lenguaje** como Gemini o ChatGPT.
+* El modelo devuelve una **respuesta generativa**, por ejemplo:
+  `"C4,0.3,E4,0.3,G4,0.5,..."`
+* El servidor MCP reenvía esa respuesta como instrucciones al ESP32.
+* El ESP32 las ejecuta, por ejemplo, **tocando la melodía en un buzzer**.
+
+### ¿Por qué es importante esta arquitectura?
+
+Esta arquitectura demuestra cómo dispositivos de bajo consumo, como microcontroladores, pueden beneficiarse de capacidades de razonamiento complejas al delegar parte de su lógica a modelos de lenguaje. Permite construir sistemas donde el comportamiento **no está codificado de antemano**, sino que se **genera en tiempo real** a partir del contexto, haciendo que los sistemas sean más adaptativos, creativos y abiertos a nuevas posibilidades.
