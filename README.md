@@ -32,6 +32,7 @@ EL kit ExpoCenfo consiste en una placa IdeaBoard (que es un ESP32) y un potenci�
 - [Guía de conexión de Google Gemini con el ESP32 (IdeaBoard)](https://github.com/Universidad-Cenfotec/ExpoCenfo/blob/main/Ejemplos_LLM_ESP32/Gemini_ESP32.md)
 - [Ejemplo sencillo "Oblique Strategies", usa Gemini que comunica con ESP32](https://github.com/Universidad-Cenfotec/ExpoCenfo/tree/main/Ejemplos_LLM_ESP32/Ejemplo_Olbique_Strategies)
 - [Ejemplo donde el ESP32 se "reprograma"a través de un código generado por Gemini](https://github.com/Universidad-Cenfotec/ExpoCenfo/blob/main/Ejemplos_LLM_ESP32/Micro%20Se%20Reprograma/README.md)
+- [Ejemplo construyendo un servidor MCP para conectar con Gemini, y recibir peticiones de un ESP32](https://github.com/Universidad-Cenfotec/ExpoCenfo/tree/main/Ejemplos_LLM_ESP32/ESP32-MCPServer-Gemini)
 
 ### Documentos
 - [Reglas para proyectos ExpoCENFO](https://github.com/Universidad-Cenfotec/ExpoCenfo/blob/main/documentos/Juzgamiento%20de%20equipos-ExpoCenfo-2025.pdf)
