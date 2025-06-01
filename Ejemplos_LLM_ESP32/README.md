@@ -1,6 +1,5 @@
 # Archivos de Directorio
 
-```markdown
 | Archivo o Carpeta                              | Descripción                                                                 |
 |------------------------------------------------|-----------------------------------------------------------------------------|
 | [`ESP32-MCPServer-Gemini`](https://github.com/Universidad-Cenfotec/ExpoCenfo/tree/main/Ejemplos_LLM_ESP32/ESP32-MCPServer-Gemini) | Ejemplo principal de arquitectura ESP32 + MCP Server + Gemini para ejecución remota. |
@@ -10,7 +9,3 @@
 | [`ESP32_Ollama_Guide.md`](https://github.com/Universidad-Cenfotec/ExpoCenfo/blob/main/Ejemplos_LLM_ESP32/ESP32_Ollama_Guide.md) | Guía para conectar el ESP32 con un modelo Ollama corriendo localmente. |
 | [`Gemini_ESP32.md`](https://github.com/Universidad-Cenfotec/ExpoCenfo/blob/main/Ejemplos_LLM_ESP32/Gemini_ESP32.md) | Explicación detallada sobre cómo usar Gemini con ESP32 a través de un servidor intermedio. |
 | [`README.md`](https://github.com/Universidad-Cenfotec/ExpoCenfo/blob/main/Ejemplos_LLM_ESP32/README.md) | Descripción general del repositorio y guía inicial para los ejemplos.     |
-```
-
-¿Te gustaría que lo presente también como parte de un índice navegable dentro del `README.md` principal?
-
