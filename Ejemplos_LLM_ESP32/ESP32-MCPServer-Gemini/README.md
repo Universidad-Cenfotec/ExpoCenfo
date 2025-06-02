@@ -3,6 +3,8 @@
 Tomás de Camino Beck, Ph.D.  
 Universidad CENFOTEC
 
+[Pueden ver un video de este tutorial en este link](https://youtu.be/1puI7Ir59Hg?si=hgGYNTDJo2P2js4b)
+
 ![ESP32](https://github.com/Universidad-Cenfotec/ExpoCenfo/blob/main/Ejemplos_LLM_ESP32/ESP32-MCPServer-Gemini/ESP32_MCP.JPG)
 
 
