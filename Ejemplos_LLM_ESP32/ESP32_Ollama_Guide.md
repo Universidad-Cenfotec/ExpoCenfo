@@ -6,7 +6,7 @@ Universidad CENFOTEC
 
 Con esta guía podrás conectar tu ESP32 a un servidor Flask que utiliza un modelo local de lenguaje con **Ollama**, como `deepseek-coder`, para generar respuestas a preguntas dinámicas. 
 
-- [En este link el profesor Jorge Ortega, explcia como hacerlo](https://youtu.be/d4747ZCveP4?si=nLi5QnsJbab93LWO)
+- [En este link el profesor Jorge Ortega, explica como hacerlo](https://youtu.be/d4747ZCveP4?si=nLi5QnsJbab93LWO)
 - [Este es un video del profesor Tomás de Camino Beck, explicando Ollama](https://youtu.be/FgAk917ALwc?si=4PyimOd2cJuA8F2u)
 
 
