@@ -27,6 +27,7 @@ Ver video de introducción:
 ## Contenidos del repositorio
 
 ### Códigos y Ejemplos
+- [Unpacking del Kit ExpoCenfo](https://youtu.be/wZwcNW3o1u0?si=PoNOVPjaHQei806x)
 - [Video de como trabajar con el IdeaBoard y Circuit Python](https://youtu.be/GzA7peI1woc?si=t7AypJyVjUAOKnQ7)
 - [Guía para configurar DeepSeek local y conectar con EPS32 (IdeaBoard)](https://github.com/Universidad-Cenfotec/ExpoCenfo/blob/main/Ejemplos_LLM_ESP32/ESP32_Ollama_Guide.md)
 - [Guía de conexión de Google Gemini con el ESP32 (IdeaBoard)](https://github.com/Universidad-Cenfotec/ExpoCenfo/blob/main/Ejemplos_LLM_ESP32/Gemini_ESP32.md)
