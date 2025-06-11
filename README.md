@@ -19,7 +19,7 @@ Ver video de introducción:
 
 ## Kit ExpoCenfo
 
-EL kit ExpoCenfo consiste en una placa IdeaBoard (que es un ESP32) y un potenciómetro (para pruebas), que se entrega de forma gratuita a todos y todas las participantes en el reto. Además en el Makerspace CENFOTEC, se cuentan con una colección de sensores y actuadores, que pueden ser utilizados por los participantes para sus proyectos.
+[EL kit ExpoCenfo consiste en una placa IdeaBoard (que es un ESP32) y un potenciómetro (para pruebas)](https://youtu.be/wZwcNW3o1u0?si=PoNOVPjaHQei806x), que se entrega de forma gratuita a todos y todas las participantes en el reto. Además en el Makerspace CENFOTEC, se cuentan con una colección de sensores y actuadores, que pueden ser utilizados por los participantes para sus proyectos.
 
 ¡Que comience el reto!
 
