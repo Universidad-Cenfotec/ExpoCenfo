@@ -3,7 +3,7 @@
 Tomás de Camino Beck, Ph.D.  
 Universidad CENFOTEC  
 
-EL programa `code_grid_gemini.py` implementa un sistema robótico que combina navegación autónoma con generación de instrucciones usando inteligencia artificial generativa. Es un ejemplo práctico de:
+EL programa [`code_grid_gemini.py`](https://github.com/Universidad-Cenfotec/ExpoCenfo/blob/main/Ejemplos_LLM_ESP32/LLM_in_the_Loop_Robotics/code_grid_gemini.py) implementa un sistema robótico que combina navegación autónoma con generación de instrucciones usando inteligencia artificial generativa. Es un ejemplo práctico de:
 
 * **AGVs (Automated Guided Vehicles)**: robots que se mueven en un entorno siguiendo rutas definidas.
 * **LLM-in-the-Loop Robotics**: una arquitectura donde un modelo de lenguaje grande (LLM) como Gemini participa en tiempo real en la toma de decisiones del robot.
