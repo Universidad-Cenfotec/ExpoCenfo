@@ -6,6 +6,8 @@
 # de un punto de inicio a uno final en una malla cartesiana. El resultado se
 # ejecuta inmediatamente en el Sumobot.
 
+# Código experimental
+
 """
 Requisitos externos
 -------------------
