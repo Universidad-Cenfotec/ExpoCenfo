@@ -104,7 +104,7 @@ def obtener_movimientos(inicio: tuple[int, int, str], final: tuple[int, int]) ->
     ## Parámetros de entrada
     - inicio = {inicio}  ➜  tupla (x₀, y₀) el robot siempre mira al Norte  
     - final  = {final}   ➜  tupla (x₁, y₁)  
-    La orientación final es indiferente.
+    La orientación final siempre es al norte
 
     **Ejemplo de salida válida**  
     L,F,F,F,R,F,F"""
