@@ -1,4 +1,4 @@
-## LLM-in-the-Loop
+## Robótica LLM-in-the-Loop
 
 Tomás de Camino Beck, Ph.D.  
 Universidad CENFOTEC  
