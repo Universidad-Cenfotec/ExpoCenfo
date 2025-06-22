@@ -73,16 +73,44 @@ def preguntar_gemini(prompt: str, max_tokens: int = 64) -> str:
     return ""
 
 
-def obtener_movimientos(inicio: tuple[int, int], final: tuple[int, int]) -> str:
-    """Construye prompt y solicita la secuencia de movimientos."""
-    prompt = (
-        "Necesito una secuencia de comandos  c1,c2,c3,...  donde cada comando c "
-        "puede ser F, L o R, para que un robot se mueva del punto {inicio} al "
-        "punto {final}, en una cuadrícula cartesiana, y donde cada comando F se "
-        "mueve una unidad, y L y R nada más rotan en un punto. No quiero texto "
-        "ni antes ni después, solo la lista de comandos separadas por comas"
-    ).format(inicio=inicio, final=final)
+def obtener_movimientos(inicio: tuple[int, int, str], final: tuple[int, int]) -> str:
+    """
+    Construye un prompt claro y estructurado para solicitar al modelo de lenguaje
+    una secuencia mínima de comandos que permita al robot llegar del punto inicial
+    al punto final en una cuadrícula cartesiana.
+    
+    Argumentos:
+    - inicio: tupla (x₀, y₀, θ₀), donde θ₀ ∈ {N, E, S, O}
+    - final: tupla (x₁, y₁)
+
+    Retorna:
+    - Una cadena con los comandos separados por comas, sin texto adicional.
+    """
+    prompt = f"""## Objetivo
+    Devuelve **solo** una lista CSV con los comandos mínimos que llevan al robot
+    desde {inicio} hasta {final} sobre una cuadrícula cartesiana.
+
+    ## Comandos permitidos
+    F – Avanza 1 unidad en la dirección actual  
+    L – Gira 90° a la izquierda en su lugar  
+    R – Gira 90° a la derecha en su lugar  
+
+    ## Restricciones de salida
+    - Sin texto adicional, títulos, comillas ni espacios.
+    - Usa mayúsculas.  
+    - Los comandos deben estar separados solo por comas
+      (ej.: L,F,F,R,F).
+
+    ## Parámetros de entrada
+    - inicio = {inicio}  ➜  tupla (x₀, y₀, θ₀) donde θ₀ ∈ {{N,E,S,O}}  
+    - final  = {final}   ➜  tupla (x₁, y₁)  
+    La orientación final es indiferente.
+
+    **Ejemplo de salida válida**  
+    L,F,F,F,R,F,F"""
+
     return preguntar_gemini(prompt)
+
 
 # -----------------------------------------------------------------------------
 # HARDWARE Y FUNCIONES DE MOVIMIENTO
