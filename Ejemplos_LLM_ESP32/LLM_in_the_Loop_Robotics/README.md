@@ -88,3 +88,52 @@ while True:
 Solo si se presiona y suelta el botón, el robot solicitará la ruta a Gemini, la interpretará y la ejecutará. Esto previene ejecuciones accidentales o en bucle.
 
 te y adaptable. Representa una convergencia entre robótica física y modelos generativos, y puede considerarse una introducción experimental a las arquitecturas **LLM-in-the-Loop**, donde la lógica de comportamiento no es codificada directamente, sino generada en tiempo real mediante IA.
+
+---
+
+## EL "Prompt"
+
+```
+## Objetivo
+Devuelve **solo** una lista CSV con los comandos mínimos que llevan al robot
+desde {inicio} hasta {final} sobre una cuadrícula cartesiana.
+
+## Comandos permitidos
+F – Avanza 1 unidad en la dirección actual  
+L – Gira 90° a la izquierda en su lugar  
+R – Gira 90° a la derecha en su lugar  
+
+## Restricciones de salida
+- Sin texto adicional, títulos, comillas ni espacios.
+- Usa mayúsculas.  
+- Los comandos deben estar separados solo por comas
+  (ej.: L,F,F,R,F).
+
+## Parámetros de entrada
+- `{inicio}`  ➜  tupla `(x₀, y₀, θ₀)` donde `θ₀ ∈ {N,E,S,O}`  
+- `{final}`   ➜  tupla `(x₁, y₁)`  
+La orientación final es indiferente.
+
+**Ejemplo de salida válida**  
+`L,F,F,F,R,F,F`
+```
+
+---
+
+### Explicación de cada elemento
+
+| Sección                      | Propósito                                                  | Detalles clave                                                                                                                     |
+| ---------------------------- | ---------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| **Objetivo**                 | Define la tarea primaria para el LLM.                      | Pide la “lista CSV” y aclara el camino a generar (de `{inicio}` a `{final}`) en una cuadrícula.                                    |
+| **Comandos permitidos**      | Especifica el vocabulario exacto que el modelo puede usar. | Se declaran F, L, R y se describe la semántica de cada uno; así se evita que el modelo invente acciones.                           |
+| **Restricciones de salida**  | Impone el formato de respuesta y prohíbe texto redundante. | Al indicar “sin texto adicional” y “sin espacios” se garantiza que el resultado pueda pasarse directamente a tu función `execute`. |
+| **Parámetros de entrada**    | Establece las variables que el sistema externo inyectará.  | `{inicio}` incluye orientación inicial θ₀ para que el LLM pueda planificar el primer giro; `{final}` solo necesita posición.       |
+| **Ejemplo de salida válida** | Proporciona una referencia concreta que guía al modelo.    | El ejemplo muestra mayúsculas, comas y ausencia de espacios, reforzando las reglas de formato.                                     |
+
+#### Por qué es adecuado para *LLM-in-the-Loop Robotics*
+
+* **Claridad semántica**: el LLM recibe un dominio de comandos cerrado, lo que facilita validación automática y evita acciones ambiguas.
+* **Formato estrictamente controlado**: permite que el software embarcado parsee la respuesta sin preprocesamiento complejo.
+* **Variables inyectables**: `{inicio}` y `{final}` pueden sustituirse dinámicamente en cada iteración del bucle de control, integrando al modelo dentro del ciclo de decisión del robot.
+* **Ejemplo orientativo**: reduce la entropía de la salida, algo crítico cuando la respuesta se usará directamente para ejecutar hardware.
+
