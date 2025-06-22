@@ -10,6 +10,8 @@ EL programa [`code_grid_gemini.py`](https://github.com/Universidad-Cenfotec/Expo
 
 El robot se desplaza sobre una cuadrícula de líneas negras utilizando sensores infrarrojos para mantenerse en el camino y un giroscopio para girar con precisión. La secuencia de movimientos no está preprogramada; en cambio, se genera dinámicamente al enviar un "prompt" a Gemini, que devuelve una lista de comandos como `F, L, R` (Forward, Left, Right).
 
+Para este ejercicio, se utiliza el [Sumobot de CENFOTEC](https://github.com/Universidad-Cenfotec/Sumobot) pero aplica en general para cualquier robot que cuente con giroscópio, y sensores IR seguidores de Línea
+
 ---
 
 ## Componentes clave del sistema
