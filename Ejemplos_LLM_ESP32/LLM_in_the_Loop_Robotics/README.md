@@ -110,7 +110,7 @@ R – Gira 90° a la derecha en su lugar
   (ej.: L,F,F,R,F).
 
 ## Parámetros de entrada
-- `{inicio}`  ➜  tupla `(x₀, y₀, θ₀)` donde `θ₀ ∈ {N,E,S,O}`  
+- `{inicio}`  ➜  tupla `(x₀, y₀)` donde el robot siempre mira al N  
 - `{final}`   ➜  tupla `(x₁, y₁)`  
 La orientación final es indiferente.
 
