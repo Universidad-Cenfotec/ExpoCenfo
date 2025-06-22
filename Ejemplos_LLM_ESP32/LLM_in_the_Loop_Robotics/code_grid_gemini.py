@@ -86,28 +86,30 @@ def obtener_movimientos(inicio: tuple[int, int, str], final: tuple[int, int]) ->
     Retorna:
     - Una cadena con los comandos separados por comas, sin texto adicional.
     """
-    prompt = f"""## Objetivo
-    Devuelve **solo** una lista CSV con los comandos mínimos que llevan al robot
+    prompt = f"""
+    Objetivo
+    Devuelve solo una lista CSV con los comandos mínimos que llevan al robot
     desde {inicio} hasta {final} sobre una cuadrícula cartesiana.
 
-    ## Comandos permitidos
+    Comandos permitidos
     F – Avanza 1 unidad en la dirección actual  
     L – Gira 90° a la izquierda en su lugar  
     R – Gira 90° a la derecha en su lugar  
 
-    ## Restricciones de salida
+    Restricciones de salida
     - Sin texto adicional, títulos, comillas ni espacios.
     - Usa mayúsculas.  
     - Los comandos deben estar separados solo por comas
       (ej.: L,F,F,R,F).
 
-    ## Parámetros de entrada
+    Parámetros de entrada
     - inicio = {inicio}  ➜  tupla (x₀, y₀) el robot siempre mira al Norte  
     - final  = {final}   ➜  tupla (x₁, y₁)  
     La orientación final siempre es al norte
 
-    **Ejemplo de salida válida**  
-    L,F,F,F,R,F,F"""
+    Ejemplo de salida válida  
+    L,F,F,F,R,F,F
+    """
 
     return preguntar_gemini(prompt)
 
