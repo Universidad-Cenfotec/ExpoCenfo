@@ -12,6 +12,8 @@ El robot se desplaza sobre una cuadrícula de líneas negras utilizando sensores
 
 Para este ejercicio, se utiliza el [Sumobot de CENFOTEC](https://github.com/Universidad-Cenfotec/Sumobot) pero aplica en general para cualquier robot que cuente con giroscópio, y sensores IR seguidores de Línea
 
+Detalles de como conectar el ESP32 a Gemini lo spueden ver en [este video](https://youtu.be/rFI_8TIMCNI?si=_rteSFMyBVmcoIL1). Este código utiliza ese ejemplo de base.
+
 ---
 
 ## Componentes clave del sistema
