@@ -39,14 +39,6 @@ from secrets import secrets  # ssid, password, api_key
 # CONEXIÓN WiFi Y CONFIGURACIÓN DE GEMINI
 # -----------------------------------------------------------------------------
 ib = IdeaBoard()
-ib.pixel = (0, 0, 255)  # Azul: conectando
-print("Conectando al WiFi…")
-wifi.radio.connect(secrets["ssid"], secrets["password"])
-print("Conectado a", secrets["ssid"], "IP:", wifi.radio.ipv4_address)
-ib.pixel = (0, 255, 0)  # Verde: conectado
-
-socket = socketpool.SocketPool(wifi.radio)
-https = requests.Session(socket, ssl.create_default_context())
 
 API_KEY = secrets["api_key"]
 ENDPOINT = (
@@ -88,8 +80,12 @@ def obtener_movimientos(inicio: tuple[int, int, str], final: tuple[int, int]) ->
     """
     prompt = f"""
     Objetivo
-    Devuelve solo una lista CSV con los comandos mínimos que llevan al robot
+    Devuelve solo una secuencia separada por comas con los comandos mínimos que llevan al robot
     desde {inicio} hasta {final} sobre una cuadrícula cartesiana.
+    
+    La cuadrícula, tiene su punto (0,0) a la izquierda abajo, y está configurada (x,y)
+
+    El robot siempre inicia mirando hacia el eje y positivo
 
     Comandos permitidos
     F – Avanza 1 unidad en la dirección actual  
@@ -105,7 +101,7 @@ def obtener_movimientos(inicio: tuple[int, int, str], final: tuple[int, int]) ->
     Parámetros de entrada
     - inicio = {inicio}  ➜  tupla (x₀, y₀) el robot siempre mira al Norte  
     - final  = {final}   ➜  tupla (x₁, y₁)  
-    La orientación final siempre es al norte
+    La orientación final siempre es hacia el eje y positivo
 
     Ejemplo de salida válida  
     L,F,F,F,R,F,F
@@ -271,21 +267,37 @@ def str_to_list(seq: str) -> list[str]:
 # LOOP PRINCIPAL
 # -----------------------------------------------------------------------------
 
+# conecta al Wifi
+ib.pixel = (0, 0, 255)  # Azul: conectando
+print("Conectando al WiFi…")
+wifi.radio.connect(secrets["ssid"], secrets["password"])
+print("Conectado a", secrets["ssid"], "IP:", wifi.radio.ipv4_address)
+ib.pixel = (0, 255, 0)  # Verde: conectado
+
+
+socket = socketpool.SocketPool(wifi.radio)
+https = requests.Session(socket, ssl.create_default_context())
+
+time.sleep(0.3)
+
+
 ib.pixel = (255, 0, 0)  # Rojo: calibrando drift
 DRIFT = calibrar_drift(5)
 ib.pixel = (0, 0, 0)
 
 # Coordenadas de ejemplo — reemplazar según necesidad
 inicio = (0, 0)
-final = (2, 3)
+final = (3, 2)
 
 while True:
     event = keys.events.get()
     if event and event.released:
+        ib.pixel = (128, 0, 128)
         cadena = obtener_movimientos(inicio, final)
         if cadena:
             comandos = str_to_list(cadena.replace(" ", ""))
             print("Ejecutando:", comandos)
+            ib.pixel = (0, 0, 0)
             execute(comandos)
         else:
             print("No se obtuvo una secuencia válida.")
