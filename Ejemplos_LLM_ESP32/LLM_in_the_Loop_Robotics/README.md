@@ -3,7 +3,7 @@
 Tomás de Camino Beck, Ph.D.  
 Universidad CENFOTEC  
 
-Robótica LLM-in-the-Loop Este término describe un sistema en el cual un modelo de lenguaje grande (LLM) está en el ciclo de control o decisión de un robot. El robot no solo ejecuta instrucciones, sino que consulta al LLM en tiempo real para:
+Robótica LLM-in-the-Loop o planificación autónoma con LLM, describe un sistema en el cual un modelo de lenguaje grande (LLM) está en el ciclo de control o decisión de un robot. El robot no solo ejecuta instrucciones, sino que consulta al LLM en tiempo real para:
 
 - Interpretar situaciones del entorno
 - Generar o adaptar planes de acción
