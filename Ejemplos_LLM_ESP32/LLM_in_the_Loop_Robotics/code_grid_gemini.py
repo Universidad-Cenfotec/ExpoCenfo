@@ -65,14 +65,14 @@ def preguntar_gemini(prompt: str, max_tokens: int = 64) -> str:
     return ""
 
 
-def obtener_movimientos(inicio: tuple[int, int, str], final: tuple[int, int]) -> str:
+def obtener_movimientos(inicio: tuple[int, int], final: tuple[int, int]) -> str:
     """
     Construye un prompt claro y estructurado para solicitar al modelo de lenguaje
     una secuencia mínima de comandos que permita al robot llegar del punto inicial
     al punto final en una cuadrícula cartesiana.
     
     Argumentos:
-    - inicio: tupla (x₀, y₀, θ₀), donde θ₀ ∈ {N, E, S, O}
+    - inicio: tupla (x₀, y₀)
     - final: tupla (x₁, y₁)
 
     Retorna:
