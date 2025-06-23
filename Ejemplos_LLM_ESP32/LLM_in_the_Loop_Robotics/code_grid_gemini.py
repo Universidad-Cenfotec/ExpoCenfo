@@ -83,28 +83,31 @@ def obtener_movimientos(inicio: tuple[int, int], final: tuple[int, int]) -> str:
     Devuelve solo una secuencia separada por comas con los comandos mínimos que llevan al robot
     desde {inicio} hasta {final} sobre una cuadrícula cartesiana.
     
-    La cuadrícula, tiene su punto (0,0) a la izquierda abajo, y está configurada (x,y)
+    reglas:
+    1.La cuadrícula cartesiana (x,y), tiene su punto (0,0) a la izquierda abajo
 
-    El robot siempre inicia mirando hacia el eje y positivo
+    2. El robot siempre inicia mirando hacia el eje "y" positivo
 
-    Comandos permitidos
+    3. Comandos permitidos
     F – Avanza 1 unidad en la dirección actual  
     L – Gira 90° a la izquierda en su lugar  
     R – Gira 90° a la derecha en su lugar  
 
-    Restricciones de salida
+    4. Restricciones de salida
     - Sin texto adicional, títulos, comillas ni espacios.
     - Usa mayúsculas.  
-    - Los comandos deben estar separados solo por comas
+    - Los comandos debe ser uno a uno, y estar separados solo por coma
       (ej.: L,F,F,R,F).
 
-    Parámetros de entrada
-    - inicio = {inicio}  ➜  tupla (x₀, y₀) el robot siempre mira al Norte  
+    5. Parámetros de entrada
+    - inicio = {inicio}  ➜  tupla (x₀, y₀) 
     - final  = {final}   ➜  tupla (x₁, y₁)  
-    La orientación final siempre es hacia el eje y positivo
 
-    Ejemplo de salida válida  
-    L,F,F,F,R,F,F
+    6. El robot siempre temina mirando hacia el eje "y" positivo igual que como comenzó
+
+
+    Ejemplo de salida con inicio (0,0) y final (3,2) válida es:  
+    R,F,F,F,L,F,F
     """
 
     return preguntar_gemini(prompt)
