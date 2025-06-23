@@ -96,41 +96,47 @@ te y adaptable. Representa una convergencia entre robótica física y modelos ge
 ## EL "Prompt"
 
 ```
-## Objetivo
-Devuelve **solo** una lista CSV con los comandos mínimos que llevan al robot
-desde {inicio} hasta {final} sobre una cuadrícula cartesiana.
+    Objetivo
+    Devuelve solo una secuencia separada por comas con los comandos mínimos que llevan al robot
+    desde {inicio} hasta {final} sobre una cuadrícula cartesiana.
+    
+    La cuadrícula, tiene su punto (0,0) a la izquierda abajo, y está configurada (x,y)
 
-## Comandos permitidos
-F – Avanza 1 unidad en la dirección actual  
-L – Gira 90° a la izquierda en su lugar  
-R – Gira 90° a la derecha en su lugar  
+    El robot siempre inicia mirando hacia el eje y positivo
 
-## Restricciones de salida
-- Sin texto adicional, títulos, comillas ni espacios.
-- Usa mayúsculas.  
-- Los comandos deben estar separados solo por comas
-  (ej.: L,F,F,R,F).
+    Comandos permitidos
+    F – Avanza 1 unidad en la dirección actual  
+    L – Gira 90° a la izquierda en su lugar  
+    R – Gira 90° a la derecha en su lugar  
 
-## Parámetros de entrada
-- `{inicio}`  ➜  tupla `(x₀, y₀)` donde el robot siempre mira al N  
-- `{final}`   ➜  tupla `(x₁, y₁)`  
-La orientación final siempre es al norte
+    Restricciones de salida
+    - Sin texto adicional, títulos, comillas ni espacios.
+    - Usa mayúsculas.  
+    - Los comandos deben estar separados solo por comas
+      (ej.: L,F,F,R,F).
 
-**Ejemplo de salida válida**  
-`L,F,F,F,R,F,F`
+    Parámetros de entrada
+    - inicio = {inicio}  ➜  tupla (x₀, y₀) el robot siempre mira al Norte  
+    - final  = {final}   ➜  tupla (x₁, y₁)  
+    La orientación final siempre es hacia el eje y positivo
+
+    Ejemplo de salida válida  
+    L,F,F,F,R,F,F
 ```
 
 ---
 
 ### Explicación de cada elemento
 
-| Sección                      | Propósito                                                  | Detalles clave                                                                                                                     |
-| ---------------------------- | ---------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| **Objetivo**                 | Define la tarea primaria para el LLM.                      | Pide la “lista CSV” y aclara el camino a generar (de `{inicio}` a `{final}`) en una cuadrícula.                                    |
-| **Comandos permitidos**      | Especifica el vocabulario exacto que el modelo puede usar. | Se declaran F, L, R y se describe la semántica de cada uno; así se evita que el modelo invente acciones.                           |
-| **Restricciones de salida**  | Impone el formato de respuesta y prohíbe texto redundante. | Al indicar “sin texto adicional” y “sin espacios” se garantiza que el resultado pueda pasarse directamente a tu función `execute`. |
-| **Parámetros de entrada**    | Establece las variables que el sistema externo inyectará.  | `{inicio}` incluye orientación inicial θ₀ para que el LLM pueda planificar el primer giro; `{final}` solo necesita posición.       |
-| **Ejemplo de salida válida** | Proporciona una referencia concreta que guía al modelo.    | El ejemplo muestra mayúsculas, comas y ausencia de espacios, reforzando las reglas de formato.                                     |
+| Sección                        | Qué comunica                                                                                                                           | Por qué es importante                                                                                                                                                                                  |
+| ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **1. Objetivo**                | “Devuelve solo una secuencia…”<br>Explica en una sola frase lo que se espera como resultado.                                           | - Los LLM responden mejor cuando se enuncia explícitamente la tarea.<br>- Un **verbo de acción** (“Devuelve”) evita ambigüedad.                                                                        |
+| **2. Contexto geométrico**     | Describe la cuadrícula (origen en la esquina inferior izquierda, formato (x, y)) y la orientación inicial (mirando al eje y positivo). | - El modelo necesita un marco de referencia para razonar sobre posiciones y giros.<br>- Fijar la orientación inicial simplifica la búsqueda de rutas mínimas.                                          |
+| **3. Comandos permitidos**     | F, L, R con definiciones concisas.                                                                                                     | - Limitar el vocabulario evita que el LLM genere tokens inesperados.<br>- Cada comando está **en mayúscula y en una línea aparte**, facilitando el “pattern matching”.                                 |
+| **4. Restricciones de salida** | Lista de reglas de formato (sin texto extra, mayúsculas, separados por comas, sin espacios).                                           | - Actúa como una **política de validación**; el robot puede rechazar cualquier cadena que no cumpla todas las reglas.<br>- La ausencia de espacios reduce el pre-procesamiento en el microcontrolador. |
+| **5. Parámetros de entrada**   | Explica `{inicio}` y `{final}` como tuplas y reitera la orientación final.                                                             | - Poner ejemplos de tipo y semántica de cada parámetro disminuye los errores de interpretación del LLM.<br>- Repetir la orientación final aclara la “meta-condición” que el plan debe cumplir.         |
+| **6. Ejemplo**                 | `L,F,F,F,R,F,F`                                                                                                                        | - Proveer un **ejemplo canónico** sirve como “few-shot” oculto: el modelo imita el patrón sin sobre-explicar.<br>- Valida que las reglas dan un output humano-legible y máquina-parseable.             |
+
 
 #### Por qué es adecuado para *LLM-in-the-Loop Robotics*
 
