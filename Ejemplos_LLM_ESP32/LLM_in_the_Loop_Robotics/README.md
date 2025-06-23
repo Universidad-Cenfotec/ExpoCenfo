@@ -12,7 +12,7 @@ Robótica LLM-in-the-Loop Este término describe un sistema en el cual un modelo
 
 El programa [`code_grid_gemini.py`](https://github.com/Universidad-Cenfotec/ExpoCenfo/blob/main/Ejemplos_LLM_ESP32/LLM_in_the_Loop_Robotics/code_grid_gemini.py) implementa un sistema robótico que combina navegación autónoma con generación de instrucciones usando inteligencia artificial generativa. Es un ejemplo práctico de:
 
-* **AGVs (Automated Guided Vehicles)**: robots que se mueven en un entorno siguiendo rutas definidas.
+* **AGVs (Automated Guided Vehicles)**: robots que se mueven en un entorno siguiendo rutas definidas. Puede aprender más sobre AGV con el sumobot en [este link](https://github.com/Universidad-Cenfotec/Sumobot/tree/main/c%C3%B3digos_de_ejemplo/AGVs)
 * **LLM-in-the-Loop Robotics**: una arquitectura donde un modelo de lenguaje grande (LLM) como Gemini participa en tiempo real en la toma de decisiones del robot.
 
 El robot se desplaza sobre una cuadrícula de líneas negras utilizando sensores infrarrojos para mantenerse en el camino y un giroscopio para girar con precisión. La secuencia de movimientos no está preprogramada; en cambio, se genera dinámicamente al enviar un "prompt" a Gemini, que devuelve una lista de comandos como `F, L, R` (Forward, Left, Right).
