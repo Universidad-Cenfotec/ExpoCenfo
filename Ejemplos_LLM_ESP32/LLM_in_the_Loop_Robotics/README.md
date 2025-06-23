@@ -145,3 +145,26 @@ te y adaptable. Representa una convergencia entre robótica física y modelos ge
 * **Variables inyectables**: `{inicio}` y `{final}` pueden sustituirse dinámicamente en cada iteración del bucle de control, integrando al modelo dentro del ciclo de decisión del robot.
 * **Ejemplo orientativo**: reduce la entropía de la salida, algo crítico cuando la respuesta se usará directamente para ejecutar hardware.
 
+### Posibles inconsistencias y retroalimentación en LLM-in-the-loop Robotics
+
+Uno de los posibles problemas al utilizar un modelo de lenguaje como parte del sistema de control de un robot (*LLM-in-the-loop*) es que las respuestas generadas pueden ser **inconsistentes, ambiguas o no cumplir completamente con las restricciones** definidas en el prompt. Por ejemplo, el LLM podría devolver:
+
+* Comandos con espacios o minúsculas (`"f, f, L"`)
+* Texto explicativo antes o después de la secuencia (`"Aquí tienes la ruta: F,F,L"`)
+* Secuencias que no llevan correctamente del punto de inicio al final
+
+Estas fallas no son infrecuentes, ya que los LLM priorizan la *coherencia lingüística* sobre la precisión estructural, especialmente cuando no se les entrena directamente para tareas de control robótico.
+
+#### Solución: retroalimentación desde el robot
+
+Una de las ventajas del enfoque *in-the-loop* es que el propio robot puede actuar como **verificador de consistencia** y **orquestador de nuevas peticiones**:
+
+* **Verifica localmente** si la secuencia cumple con el patrón esperado (usando expresiones regulares u otras validaciones simples).
+* **Simula** (si tiene mapa) o **ensaya parcialmente** el trayecto para confirmar que el plan lo lleva al destino con la orientación final correcta.
+* **Solicita una nueva respuesta** si detecta errores o inconsistencias, ajustando incluso el prompt para aclarar restricciones malinterpretadas.
+
+Este ciclo de acción-validación-repetición convierte al LLM en un **colaborador iterativo**, no en una fuente única de verdad. La robustez del sistema no depende únicamente de la calidad del LLM, sino de la capacidad del robot para *evaluar* y *dialogar* con él de forma crítica.
+
+Este patrón de colaboración es una de las características más prometedoras del paradigma *LLM-in-the-loop Robotics*, donde la inteligencia no reside en un solo componente, sino en la **interacción adaptativa** entre máquina física y modelo generativo.
+
+
