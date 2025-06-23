@@ -149,7 +149,9 @@ te y adaptable. Representa una convergencia entre robótica física y modelos ge
 * **Variables inyectables**: `{inicio}` y `{final}` pueden sustituirse dinámicamente en cada iteración del bucle de control, integrando al modelo dentro del ciclo de decisión del robot.
 * **Ejemplo orientativo**: reduce la entropía de la salida, algo crítico cuando la respuesta se usará directamente para ejecutar hardware.
 
-### Posibles inconsistencias y retroalimentación en LLM-in-the-loop Robotics
+---
+
+## Posibles inconsistencias y retroalimentación en LLM-in-the-loop Robotics
 
 Uno de los posibles problemas al utilizar un modelo de lenguaje como parte del sistema de control de un robot (*LLM-in-the-loop*) es que las respuestas generadas pueden ser **inconsistentes, ambiguas o no cumplir completamente con las restricciones** definidas en el prompt. Por ejemplo, el LLM podría devolver:
 
