@@ -34,6 +34,7 @@ Ver video de introducción:
 - [Ejemplo sencillo "Oblique Strategies", usa Gemini que comunica con ESP32](https://github.com/Universidad-Cenfotec/ExpoCenfo/tree/main/Ejemplos_LLM_ESP32/Ejemplo_Olbique_Strategies)
 - [Ejemplo donde el ESP32 se "reprograma"a través de un código generado por Gemini](https://github.com/Universidad-Cenfotec/ExpoCenfo/blob/main/Ejemplos_LLM_ESP32/Micro%20Se%20Reprograma/README.md)
 - [Ejemplo construyendo un servidor MCP para conectar con Gemini, y recibir peticiones de un ESP32](https://github.com/Universidad-Cenfotec/ExpoCenfo/tree/main/Ejemplos_LLM_ESP32/ESP32-MCPServer-Gemini)
+- [Ejemplo de Google Gemini controlando un robot](https://github.com/Universidad-Cenfotec/Sumobot/blob/main/c%C3%B3digos_de_ejemplo/LLM_in_the_Loop_Robotics/README.md)
 
 ### Documentos
 - [Reglas para proyectos ExpoCENFO](https://github.com/Universidad-Cenfotec/ExpoCenfo/blob/main/documentos/Juzgamiento%20de%20equipos-ExpoCenfo-2025.pdf)
