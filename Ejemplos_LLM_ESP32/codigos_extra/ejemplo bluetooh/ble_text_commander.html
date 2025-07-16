@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLE Text Commander</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .container:hover {
+            transform: translateY(-5px);
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .status {
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .status.disconnected {
+            background: #fee;
+            color: #c33;
+            border: 2px solid #fcc;
+        }
+
+        .status.connected {
+            background: #efe;
+            color: #363;
+            border: 2px solid #cfc;
+        }
+
+        .status.connecting {
+            background: #fff3cd;
+            color: #856404;
+            border: 2px solid #ffeaa7;
+        }
+
+        button {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 10px;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .command-section {
+            margin-top: 30px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+        }
+
+        .command-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-size: 16px;
+            margin-bottom: 15px;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .device-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .device-info h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .device-info p {
+            color: #666;
+            margin: 5px 0;
+        }
+
+        .log {
+            background: #f1f3f4;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 20px;
+            max-height: 200px;
+            overflow-y: auto;
+            text-align: left;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+        }
+
+        .log-entry {
+            margin-bottom: 5px;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .log-entry.sent {
+            background: #e3f2fd;
+            color: #1565c0;
+        }
+
+        .log-entry.received {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+
+        .log-entry.error {
+            background: #ffebee;
+            color: #c62828;
+        }
+
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔗 BLE Commander</h1>
+        
+        <div id="status" class="status disconnected">
+            Desconectado
+        </div>
+
+        <button id="connectBtn">Conectar a Dispositivo BLE</button>
+        <button id="disconnectBtn" disabled>Desconectar</button>
+
+        <div id="deviceInfo" class="device-info" style="display: none;">
+            <h3>Información del Dispositivo</h3>
+            <p><strong>Nombre:</strong> <span id="deviceName">-</span></p>
+            <p><strong>ID:</strong> <span id="deviceId">-</span></p>
+            <p><strong>Servicio:</strong> <span id="serviceId">-</span></p>
+        </div>
+
+        <div id="commandSection" class="command-section">
+            <input type="text" id="commandInput" placeholder="Escribe tu comando aquí..." maxlength="100">
+            <button id="sendBtn">Enviar Comando</button>
+            <button id="clearLogBtn">Limpiar Log</button>
+        </div>
+
+        <div id="log" class="log"></div>
+    </div>
+
+    <script>
+        class BLECommander {
+            constructor() {
+                this.device = null;
+                this.server = null;
+                this.service = null;
+                this.characteristic = null;
+                this.isConnected = false;
+                
+                this.initializeUI();
+                this.checkBLESupport();
+            }
+
+            checkBLESupport() {
+                if (!navigator.bluetooth) {
+                    this.log('❌ Web Bluetooth no está soportado en este navegador', 'error');
+                    document.getElementById('connectBtn').disabled = true;
+                    return false;
+                }
+                this.log('✅ Web Bluetooth soportado');
+                return true;
+            }
+
+            initializeUI() {
+                document.getElementById('connectBtn').addEventListener('click', () => this.connect());
+                document.getElementById('disconnectBtn').addEventListener('click', () => this.disconnect());
+                document.getElementById('sendBtn').addEventListener('click', () => this.sendCommand());
+                document.getElementById('clearLogBtn').addEventListener('click', () => this.clearLog());
+                
+                document.getElementById('commandInput').addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') {
+                        this.sendCommand();
+                    }
+                });
+            }
+
+            async connect() {
+                try {
+                    this.updateStatus('connecting', 'Conectando...');
+                    this.log('🔍 Buscando dispositivos BLE...');
+
+                    // Solicitar dispositivo BLE
+                    this.device = await navigator.bluetooth.requestDevice({
+                        acceptAllDevices: true,
+                        optionalServices: [
+                            '12345678-1234-5678-9abc-def123456789', // Servicio personalizado
+                            '0000180f-0000-1000-8000-00805f9b34fb', // Battery Service
+                            '0000180a-0000-1000-8000-00805f9b34fb', // Device Information
+                            '6e400001-b5a3-f393-e0a9-e50e24dcca9e'  // Nordic UART Service
+                        ]
+                    });
+
+                    this.log(`📱 Dispositivo encontrado: ${this.device.name || 'Sin nombre'}`);
+                    
+                    // Conectar al servidor GATT
+                    this.server = await this.device.gatt.connect();
+                    this.log('🔗 Conectado al servidor GATT');
+
+                    // Buscar servicios disponibles
+                    const services = await this.server.getPrimaryServices();
+                    this.log(`📡 Servicios encontrados: ${services.length}`);
+
+                    // Intentar encontrar un servicio con características de escritura
+                    let writeCharacteristic = null;
+                    let selectedService = null;
+
+                    for (const service of services) {
+                        try {
+                            const characteristics = await service.getCharacteristics();
+                            for (const characteristic of characteristics) {
+                                if (characteristic.properties.write || characteristic.properties.writeWithoutResponse) {
+                                    writeCharacteristic = characteristic;
+                                    selectedService = service;
+                                    break;
+                                }
+                            }
+                            if (writeCharacteristic) break;
+                        } catch (error) {
+                            console.log(`No se pudo acceder a las características del servicio ${service.uuid}`);
+                        }
+                    }
+
+                    if (!writeCharacteristic) {
+                        throw new Error('No se encontró una característica de escritura');
+                    }
+
+                    this.service = selectedService;
+                    this.characteristic = writeCharacteristic;
+                    this.isConnected = true;
+
+                    this.updateDeviceInfo();
+                    this.updateStatus('connected', 'Conectado');
+                    this.log('✅ Listo para enviar comandos');
+                    
+                    // Mostrar sección de comandos
+                    const commandSection = document.getElementById('commandSection');
+                    commandSection.classList.add('visible');
+                    
+                    // Manejar desconexión
+                    this.device.addEventListener('gattserverdisconnected', () => {
+                        this.handleDisconnection();
+                    });
+
+                } catch (error) {
+                    this.log(`❌ Error de conexión: ${error.message}`, 'error');
+                    this.updateStatus('disconnected', 'Error de conexión');
+                    this.resetConnection();
+                }
+            }
+
+            async sendCommand() {
+                if (!this.isConnected || !this.characteristic) {
+                    this.log('❌ No hay conexión activa', 'error');
+                    return;
+                }
+
+                const command = document.getElementById('commandInput').value.trim();
+                if (!command) {
+                    this.log('❌ Comando vacío', 'error');
+                    return;
+                }
+
+                try {
+                    // Convertir comando a bytes
+                    const encoder = new TextEncoder();
+                    const data = encoder.encode(command);
+                    
+                    // Enviar comando
+                    await this.characteristic.writeValue(data);
+                    this.log(`📤 Enviado: "${command}"`, 'sent');
+                    
+                    // Limpiar input
+                    document.getElementById('commandInput').value = '';
+                    
+                } catch (error) {
+                    this.log(`❌ Error enviando comando: ${error.message}`, 'error');
+                }
+            }
+
+            disconnect() {
+                if (this.device && this.device.gatt.connected) {
+                    this.device.gatt.disconnect();
+                }
+                this.handleDisconnection();
+            }
+
+            handleDisconnection() {
+                this.log('🔌 Dispositivo desconectado');
+                this.resetConnection();
+                this.updateStatus('disconnected', 'Desconectado');
+                
+                // Ocultar sección de comandos
+                const commandSection = document.getElementById('commandSection');
+                commandSection.classList.remove('visible');
+            }
+
+            resetConnection() {
+                this.device = null;
+                this.server = null;
+                this.service = null;
+                this.characteristic = null;
+                this.isConnected = false;
+                
+                document.getElementById('connectBtn').disabled = false;
+                document.getElementById('disconnectBtn').disabled = true;
+                document.getElementById('deviceInfo').style.display = 'none';
+            }
+
+            updateStatus(type, message) {
+                const statusEl = document.getElementById('status');
+                statusEl.className = `status ${type}`;
+                
+                let content = message;
+                if (type === 'connecting') {
+                    content = '<span class="spinner"></span>' + message;
+                }
+                statusEl.innerHTML = content;
+                
+                document.getElementById('connectBtn').disabled = type === 'connected' || type === 'connecting';
+                document.getElementById('disconnectBtn').disabled = type !== 'connected';
+            }
+
+            updateDeviceInfo() {
+                document.getElementById('deviceName').textContent = this.device.name || 'Sin nombre';
+                document.getElementById('deviceId').textContent = this.device.id || 'Desconocido';
+                document.getElementById('serviceId').textContent = this.service.uuid;
+                document.getElementById('deviceInfo').style.display = 'block';
+            }
+
+            log(message, type = 'info') {
+                const logEl = document.getElementById('log');
+                const entry = document.createElement('div');
+                entry.className = `log-entry ${type}`;
+                entry.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
+                logEl.appendChild(entry);
+                logEl.scrollTop = logEl.scrollHeight;
+            }
+
+            clearLog() {
+                document.getElementById('log').innerHTML = '';
+            }
+        }
+
+        // Inicializar la aplicación
+        document.addEventListener('DOMContentLoaded', () => {
+            new BLECommander();
+        });
+    </script>
+</body>
+</html>
