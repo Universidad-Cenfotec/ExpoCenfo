@@ -38,6 +38,7 @@ Ver video de introducción:
 
 ### Documentos
 - [Reglas para proyectos ExpoCENFO](https://github.com/Universidad-Cenfotec/ExpoCenfo/blob/main/documentos/Juzgamiento%20de%20equipos-ExpoCenfo-2025.pdf)
+- [Plantilla de entrega preliminar](https://github.com/Universidad-Cenfotec/ExpoCenfo/blob/main/documentos/Plantilla_Avance_Preliminar_CDIO.md)
 - [Como crear un repositorio GitHub para el proyecto.](https://github.com/Universidad-Cenfotec/ExpoCenfo/blob/main/documentos/Guia_Documentacion_Proyectos_Borde_LLMs.md)
 
 ---
