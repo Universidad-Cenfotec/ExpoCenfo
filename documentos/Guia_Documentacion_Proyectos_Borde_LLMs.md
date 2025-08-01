@@ -22,7 +22,7 @@ CHANGELOG.md             # Registro de cambios
 ## 2. Documentar el Diseño del Sistema
 
 ### a) Diagramas
-- **Diagrama de arquitectura**: Usa [Mermaid](https://mermaid-js.github.io/) o [Draw.io](https://app.diagrams.net/).
+- **Diagrama de arquitectura**: Usa [Mermaid](https://mermaid-js.github.io/) o [Draw.io](https://app.diagrams.net/), o cualquier otro.
 - **Diagrama de flujo de datos**: Explica cómo se envía información entre sensores, microcontrolador y LLM.
 - **Esquemas eléctricos**: Diagramas de conexiones (pines, sensores, actuadores).
 
