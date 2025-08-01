@@ -1,5 +1,4 @@
-
-# Avance Preliminar del Proyecto (Etapas Concebir y Diseñar - CDIO)
+# Plantilla Avance Preliminar del Proyecto
 
 ## 1. Información del Proyecto
 - **Nombre del Proyecto:**  
@@ -50,4 +49,4 @@
   *(Capturas de pantalla, esquemas, fotos del prototipo, etc.)*
 
 ---
-> **Nota:** Este avance busca documentar el pensamiento del equipo en las fases iniciales del proyecto. No es necesario que el sistema esté funcionando aún.
+> **Nota:** Este avance busca documentar el pensamiento del equipo en las fases iniciales del proyecto. No es necesario que el sistema esté funcionando aún, o que absolutamente todos los puntos de esta plantilla estén copletos
