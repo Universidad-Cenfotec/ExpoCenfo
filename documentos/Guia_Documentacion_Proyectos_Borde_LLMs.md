@@ -1,5 +1,7 @@
-
 # Guía para Documentar Proyectos de Inteligencia en el Borde con LLMs en GitHub
+Tomás de Camino Beck, Ph.D.  
+Universidad CENFOTEC
+
 
 ## 1. Estructura del Repositorio
 ```
