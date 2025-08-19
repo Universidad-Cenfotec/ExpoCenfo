@@ -37,7 +37,7 @@ Ver video de introducción:
 - [Ejemplo de Google Gemini controlando un robot](https://github.com/Universidad-Cenfotec/Sumobot/blob/main/c%C3%B3digos_de_ejemplo/LLM_in_the_Loop_Robotics/README.md)
 
 ### Documentos
-- [Reglas para proyectos ExpoCENFO](https://github.com/Universidad-Cenfotec/ExpoCenfo/blob/main/documentos/Juzgamiento%20de%20equipos-ExpoCenfo-2025.pdf)
+- [Reglas para proyectos ExpoCENFO](https://github.com/Universidad-Cenfotec/ExpoCenfo/blob/main/documentos/Juzgamiento%20de%20equipos-ExpoCENFO-2025.pdf)
 - [Plantilla de entrega preliminar](https://github.com/Universidad-Cenfotec/ExpoCenfo/blob/main/documentos/Plantilla_Avance_Preliminar_CDIO.md)
 - [Como crear un repositorio GitHub para el proyecto.](https://github.com/Universidad-Cenfotec/ExpoCenfo/blob/main/documentos/Guia_Documentacion_Proyectos_Borde_LLMs.md)
 
